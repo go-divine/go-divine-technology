@@ -1,0 +1,3942 @@
+<html lang="" dir="ltr">
+
+<head>
+  <style>
+    body {
+      transition: opacity ease-in 0.2s;
+    }
+
+    body[unresolved] {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <link href="./style.css" rel="stylesheet">
+  <link href="../assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <title>Check Out</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+  <script type="text/javascript" id="ftr__script" async=""
+    src="https://5e3d9c9d1fe4.cdn4.forter.com/sn/5e3d9c9d1fe4/script.js"></script>
+  <script type="text/javascript" async=""
+    src="https://www.googletagmanager.com/gtag/destination?id=G-0GXH3LFTN2&amp;l=dataLayer&amp;cx=c"></script>
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
+  <script type="text/javascript" async="" src="https://analytics.tiktok.com/i18n/pixel/static/main.MWNkZmM2YTcxMA.js"
+    data-id="CJ67GBJC77U5K7SP5G20"></script>
+  <script type="text/javascript" async=""
+    src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=CJ67GBJC77U5K7SP5G20&amp;lib=ttq"></script>
+  <script src="//bat.bing.com/bat.js" async=""></script>
+  <script
+    src="https://connect.facebook.net/signals/config/233182517365050?v=2.9.138&amp;r=stable&amp;domain=cart.hostinger.com"
+    async=""></script>
+  <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+  <script type="text/javascript" async="" src="https://a.quora.com/qevents.js"></script>
+  <script type="text/javascript" async=""
+    src="https://www.googletagmanager.com/gtag/js?id=G-73N1QWLEMH&amp;l=dataLayer&amp;cx=c"></script>
+  <script type="text/javascript" async="" src="https://www.redditstatic.com/ads/pixel.js"></script>
+  <script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-1037863.js?sv=7"></script>
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KL4FQVG"></script>
+  <script src="https://js.hcaptcha.com/1/api.js" async="" defer=""></script>
+  <script>
+    window.__DEFAULT_IMPORT_MAP__ = [
+      {
+        tag: "script",
+        src: "https://cart.hostinger.com/assets/index-5759f40b.js",
+        type: "module",
+      },
+      {
+        tag: "link",
+        href: "https://cart.hostinger.com/assets/index-0e96a470.css",
+        rel: "stylesheet",
+      },
+    ];
+  </script>
+  <script>
+    (function () {
+      "use strict";
+      const i = "8080",
+        a = "https://hcart-frontend-prod-pr-{PR_NUMBER}.hostinger.dev",
+        s = "preview-import-map.js",
+        p = () => {
+          const e = window.location.search,
+            t = new URLSearchParams(e),
+            n = { previewApp: "", reset: "" };
+          for (const [r, c] of t.entries()) n[r] = c;
+          return n;
+        },
+        l = () => {
+          const e = localStorage.getItem(o);
+          if (!e) return;
+          const t = document.createElement("div");
+          (t.innerHTML = `Reset preview - ${e}`),
+            Object.entries({
+              position: "fixed",
+              bottom: "15px",
+              left: "15px",
+              padding: "0px 4px",
+              fontSize: "10px",
+              fontWeight: "bold",
+              color: "#fff",
+              backgroundColor: "#f00",
+              zIndex: "9999",
+              cursor: "pointer",
+              "border-radius": "4px",
+            }).forEach(([r, c]) => {
+              t.style[r] = c;
+            }),
+            window.setTimeout(() => document.body.appendChild(t), 500),
+            t.addEventListener("click", () => {
+              localStorage.removeItem(o), location.reload();
+            });
+        },
+        o = "preview-app",
+        d = () => {
+          const e = new URL(window.location.href);
+          e.searchParams.delete("previewApp"), e.searchParams.delete("reset");
+          const t = e.href;
+          window.history.replaceState(null, "", t);
+        },
+        m = () => {
+          const { previewApp: e, reset: t } = p();
+          t && localStorage.removeItem(o),
+            e && localStorage.setItem(o, e),
+            l(),
+            !(!e && !t) && d();
+        },
+        P = () => {
+          const e = localStorage.getItem(o);
+          if (e) {
+            if (e === "local") return `http://localhost:${i}`;
+            if (parseInt(e)) return a.replace("{PR_NUMBER}", e);
+          }
+        },
+        E = {
+          script: (e) => {
+            const t = document.createElement("script");
+            return (
+              (t.src = e.src),
+              (t.type = e.type),
+              (t.crossOrigin = ""),
+              (t.defer = !0),
+              t
+            );
+          },
+          link: (e) => {
+            const t = document.createElement("link");
+            return (t.rel = e.rel), (t.href = e.href), t;
+          },
+        },
+        _ = async (e) => {
+          const t = document.getElementsByTagName("head")[0],
+            n = document.createDocumentFragment();
+          e == null ||
+            e.forEach((r) => {
+              const c = E[r.tag],
+                w = c(r);
+              n.appendChild(w);
+            }),
+            t.appendChild(n);
+        },
+        u = (e) =>
+          new Promise((t) => {
+            if (!e) return t(window.__DEFAULT_IMPORT_MAP__);
+            const n = document.getElementsByTagName("head")[0],
+              r = document.createElement("script");
+            (r.src = e),
+              (r.crossOrigin = ""),
+              n.appendChild(r),
+              r.addEventListener("load", () =>
+                t(window.__PREVIEW_IMPORT_MAP__)
+              );
+          });
+      (async () => {
+        m();
+        const e = P(),
+          t = e ? `${e}/${s}` : void 0,
+          n = await u(t);
+        _(n);
+      })();
+    })();
+  </script>
+  <script src="https://cart.hostinger.com/assets/index-5759f40b.js" type="module" crossorigin="" defer=""></script>
+  <link rel="stylesheet" href="https://cart.hostinger.com/assets/index-0e96a470.css" />
+  <script type="module">
+    import.meta.url;
+    import("_").catch(() => 1);
+    async function* g() { }
+    if (location.protocol != "file:") {
+      window.__vite_is_modern_browser = true;
+    }
+  </script>
+  <script type="module">
+    !(function () {
+      if (window.__vite_is_modern_browser) return;
+      console.warn(
+        "vite: loading legacy chunks, syntax error above and the same error below should be ignored"
+      );
+      var e = document.getElementById("vite-legacy-polyfill"),
+        n = document.createElement("script");
+      (n.src = e.src),
+        (n.onload = function () {
+          System.import(
+            document
+              .getElementById("vite-legacy-entry")
+              .getAttribute("data-src")
+          );
+        }),
+        document.body.appendChild(n);
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cart.hostinger.com/assets/LocationFormSection-5a9d6ae9.css" />
+  <link rel="stylesheet" href="https://cart.hostinger.com/assets/SelectPayment-6e7c79ad.css" />
+  <link rel="stylesheet" href="https://cart.hostinger.com/assets/Cart-1bac38ca.css" />
+  <link rel="modulepreload" as="script" crossorigin=""
+    href="https://cart.hostinger.com/assets/ProcessoutHandler-d04facf2.js" />
+  <link rel="modulepreload" as="script" crossorigin="" href="https://cart.hostinger.com/assets/index-5759f40b.js" />
+  <link rel="stylesheet" href="https://cart.hostinger.com/assets/ProcessoutHandler-989ff3b4.css" />
+  <script id="risk-js" src="https://risk.checkout.com/cdn/risk/1/risk.js"></script>
+  <script id="processout" src="https://js.processout.com/processout.js"></script>
+  <script id="script-processout-1">
+    function makeRequestByMethod(
+      method,
+      url,
+      postData,
+      callback,
+      synchronous
+    ) {
+      var http = new XMLHttpRequest();
+      http.onreadystatechange = function () {
+        if (http.readyState === 4) {
+          if (http.status < 500) {
+            var response = JSON.parse(http.responseText);
+
+            if (http.status !== 200) {
+              document.dispatchEvent(
+                createEvent("payment.failed", {
+                  message: response.error.message,
+                })
+              );
+              return;
+            }
+
+            return callback(response);
+          }
+
+          document.dispatchEvent(
+            createEvent("payment.failed", {
+              message: "Oops, unexpected error occurred",
+            })
+          );
+        }
+      };
+
+      http.open(method, url, synchronous !== true);
+      http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      http.setRequestHeader("Accept", "application/json");
+      http.send(JSON.stringify(postData));
+    }
+    function makeRequest(url, postData, callback) {
+      return makeRequestByMethod("POST", url, postData, callback);
+    }
+    function makeGetRequest(url, postData, callback, synchronous) {
+      return makeRequestByMethod("GET", url, postData, callback, synchronous);
+    }
+    function makeFormRequest(formId, url, callback) {
+      let inputs = document.querySelectorAll(
+        "#" + formId + " input, #" + formId + " select"
+      );
+      let formData = {};
+      for (
+        let inputIterator = 0;
+        inputIterator < inputs.length;
+        inputIterator++
+      ) {
+        let selectedInput = inputs[inputIterator];
+        if (selectedInput.name) {
+          formData[selectedInput.name] = selectedInput.value;
+        }
+      }
+      if (null === url) {
+        url = document.getElementById(formId).action;
+      }
+      return makeRequestByMethod("POST", url, formData, callback);
+    }
+    function createEvent(event, message) {
+      return new CustomEvent(event, {
+        detail: message,
+      });
+    }
+    function setElementHidden(elementId, state) {
+      let loader = document.getElementById(elementId);
+      loader.hidden = state;
+    }
+    function appendHiddenInput(appentToId, inputId, inputName, inputValue) {
+      let hiddenInput = document.createElement("input");
+      hiddenInput.type = "hidden";
+      hiddenInput.id = inputId;
+      hiddenInput.name = inputName;
+      hiddenInput.value = inputValue;
+      document.getElementById(appentToId).appendChild(hiddenInput);
+    }
+    function getQueryVar(variable) {
+      let query = window.location.search.substring(1);
+      let vars = query.split("&");
+      for (let i = 0; i < vars.length; i++) {
+        let pair = vars[i].split("=");
+        if (pair[0] === variable) {
+          return pair[1];
+        }
+      }
+      return false;
+    }
+    function getQueryVars(vars) {
+      let qry = "";
+      for (let i = 0; i < vars.length; i++) {
+        let qryVal = getQueryVar(vars[i]);
+        if (false !== qryVal) {
+          qry += (qry === "" ? "" : "&") + vars[i] + "=" + qryVal;
+        }
+      }
+
+      return qry;
+    }
+    function getQueryToAppend() {
+      let qry = getQueryVars(["currency", "country", "amount"]);
+      if (qry) {
+        qry = "?" + qry;
+      }
+
+      return qry;
+    }
+    function docReady(fn) {
+      if (
+        document.readyState === "complete" ||
+        document.readyState === "interactive"
+      ) {
+        setTimeout(fn, 1);
+      } else {
+        document.addEventListener("DOMContentLoaded", fn);
+      }
+    }
+  </script>
+  <script id="script-processout-2">
+    var error = document.getElementById("errors");
+    var success = document.getElementById("success");
+    var processoutPublicKey = "proj_KjM2GnoleisdUgtyPMjcDudeis1TBSDP";
+    var errorCodes = {
+    };
+
+    function togglePaymentButton(disable) {
+      var paymentButton = document.getElementById("payment-btn");
+      if (disable) {
+        paymentButton.disabled = disable;
+        return;
+      }
+
+      if (paymentButton && paymentButton.hasAttribute("disabled")) {
+        paymentButton.removeAttribute("disabled");
+      }
+    }
+
+    function buildProcessoutClient() {
+      return new ProcessOut.ProcessOut(processoutPublicKey);
+    }
+
+    function detectCard(e) {
+      let cardLogoMap = {
+        visa: "visa",
+        mastercard: "mastercard",
+        "american-express": "amex",
+        "union-pay": "unionpay",
+        "diners-club": "diners",
+        discover: "discover",
+        jcb: "jcb",
+        maestro: "maestro",
+        hipercard: "hipercard",
+        elo: "elo",
+      };
+      let cardLogo =
+        "https://payments.hostinger.com/img/card-logos/default.svg";
+      if (
+        e.schemes.length === 1 &&
+        cardLogoMap.hasOwnProperty(e.schemes[0])
+      ) {
+        cardLogo =
+          "https://payments.hostinger.com/img/card-logos/" +
+          cardLogoMap[e.schemes[0]] +
+          ".svg";
+      }
+      document.querySelector(".card-logo").src = cardLogo;
+    }
+
+    window.updatePaymentAmount = function (price) {
+      let installments = document.querySelector("#installments");
+      let addMore = installments.getAttribute("data-add-more-msg");
+      let currencyPrecision = parseInt(
+        installments.getAttribute("data-currency-precision")
+      );
+      let currencySymbol = installments.getAttribute("data-currency-symbol");
+      let ratesMessage = installments.getAttribute("data-interest-rates-msg");
+      let installmentOptions = document.querySelectorAll(
+        "#installments option"
+      );
+      for (let i = 0, len = installmentOptions.length; i < len; i++) {
+        let installmentOption = installmentOptions[i];
+        let minAmount =
+          installmentOption.getAttribute("data-min-amount") /
+          10 ** currencyPrecision;
+        let monthCount = installmentOption.getAttribute("data-month");
+        let monthTranslated = installments.getAttribute(
+          "data-str-month" + (monthCount > 1 ? "s" : "")
+        );
+        let rate = installmentOption.getAttribute("data-rate");
+        let monthString = monthCount + " " + monthTranslated;
+        let priceString = "";
+        if (isNaN(rate) || rate == 0.0) {
+          priceString = ratesMessage;
+        } else {
+          let total = price * rate;
+          let totalStr = currencySymbol + total.toFixed(currencyPrecision);
+          let subTotalStr =
+            currencySymbol + (total / monthCount).toFixed(currencyPrecision);
+          priceString = subTotalStr + " (" + totalStr + ")";
+        }
+        let itemString = monthString + " " + priceString;
+        if (price >= minAmount) {
+          if (installmentOption.hasAttribute("disabled")) {
+            installmentOption.removeAttribute("disabled");
+          }
+        } else {
+          if (!installmentOption.hasAttribute("disabled")) {
+            installmentOption.setAttribute("disabled", "disabled");
+          }
+          let replacement =
+            currencySymbol + (minAmount - price).toFixed(currencyPrecision);
+          itemString += " " + addMore.replace(":placeHolder", replacement);
+        }
+        installmentOption.selected = false;
+        installmentOption.innerText = itemString;
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var processout = buildProcessoutClient();
+      processout.setupForm(
+        document.getElementById("payment-form"),
+        {
+          requireCVC: true,
+          style: {
+            fontSize: "16px",
+            "::placeholder": {
+              color: "#727586",
+            },
+          },
+        },
+        function (form) {
+          initializeForm(form);
+        },
+        function (error) {
+          document.dispatchEvent(
+            createEvent("payment.failed-initializing", {
+              message: "failed-initializing",
+            })
+          );
+        }
+      );
+
+      function initializeForm(form) {
+        form.addEventListener("submit", function (event) {
+          handleFormSubmit(event, form);
+        });
+        let numberField = form.getNumberField();
+        numberField.on("keyup", detectCard);
+        numberField.on("change", detectCard);
+      }
+
+      function doFormSubmit(form) {
+        if (typeof window.forterToken === "string") {
+          appendHiddenInput(
+            "payment-form",
+            "forter_token",
+            "forter_token",
+            window.forterToken
+          );
+        }
+
+        document.dispatchEvent(
+          createEvent("payment.establishing", { message: "establishing" })
+        );
+        togglePaymentButton(true);
+        processout.tokenize(
+          form,
+          {
+            name: document.getElementById("cardholdername").value,
+          },
+          function (cardToken) {
+            document.getElementById("processout_token").value = cardToken;
+            document.dispatchEvent(
+              createEvent("payment.card-tokenized", {
+                cardToken: cardToken,
+                callback: function (invoiceId, customerId) {
+                  handle3ds(invoiceId, customerId);
+                },
+              })
+            );
+          },
+          function (error) {
+            let errorMessages = {
+              "The card number is invalid.": "The card number is invalid.",
+              "The card CVC is required.": "The card CVC is required.",
+              "The card expiry month is invalid.":
+                "The card expiry month is invalid.",
+            };
+            let message = error.message;
+            if (errorMessages.hasOwnProperty(message)) {
+              message = errorMessages[message];
+            } else if (
+              errorCodes.hasOwnProperty("processout." + error.code)
+            ) {
+              message = errorCodes["processout." + error.code];
+            }
+            document.dispatchEvent(
+              createEvent("payment.invalid-details", {
+                message: message,
+                code: error.code,
+              })
+            );
+            togglePaymentButton(false);
+          }
+        );
+      }
+
+      function handleFormSubmit(event, form) {
+        event.preventDefault();
+        getRiskSessionId()
+          .then((riskJsToken) => {
+            appendHiddenInput(
+              "payment-form",
+              "riskjs_token",
+              "riskjs_token",
+              riskJsToken
+            );
+          })
+          .catch((error) => {
+            console.log(error);
+            document.dispatchEvent(
+              createEvent("payment.failed", {
+                message: error,
+                code: error.code,
+              })
+            );
+          })
+          .finally(() => {
+            doFormSubmit(form);
+
+            return false;
+          });
+      }
+
+      function handle3ds(invoiceId, customerId) {
+        processout.makeCardPayment(
+          invoiceId,
+          customerId,
+          {},
+          function () {
+            appendHiddenInput(
+              "payment-form",
+              "invoice_id",
+              "invoice_id",
+              invoiceId
+            );
+            appendHiddenInput(
+              "payment-form",
+              "customer_id",
+              "customer_id",
+              customerId
+            );
+            makeFormRequest("payment-form", null, function (response) {
+              document.dispatchEvent(
+                createEvent("payment.completed", {
+                  message: "Success",
+                  response: response,
+                })
+              );
+            });
+          },
+          function (error) {
+            let errorMessages = {
+              "The card number is invalid.": "The card number is invalid.",
+              "The card CVC is required.": "The card CVC is required",
+              "The card expiry month is invalid.":
+                "The card expiry month is invalid.",
+            };
+            let message = error.message;
+            if (window.loadedCorrections.hasOwnProperty(message)) {
+              message = window.loadedCorrections[message];
+            } else if (errorMessages.hasOwnProperty(message)) {
+              message = errorMessages[message];
+            } else if (
+              errorCodes.hasOwnProperty("processout." + error.code)
+            ) {
+              message = errorCodes["processout." + error.code];
+            }
+
+            document.dispatchEvent(
+              createEvent("payment.failed", {
+                message: message,
+                code: error.code,
+              })
+            );
+            togglePaymentButton(false);
+          }
+        );
+      }
+    });
+  </script>
+  <script id="script-processout-3">
+    document.addEventListener("ftr:tokenReady", function (evt) {
+      window.forterToken = evt.detail;
+    });
+  </script>
+  <script id="script-processout-4">
+    (function () {
+      var merchantConfig = {
+        csp: false,
+      };
+
+      var siteId = "5e3d9c9d1fe4";
+      function t(t, n) {
+        for (var e = t.split(""), r = 0; r < e.length; ++r)
+          e[r] = String.fromCharCode(e[r].charCodeAt(0) + n);
+        return e.join("");
+      }
+      function n(n) {
+        return t(n, -S).replace(/%SN%/g, siteId);
+      }
+      function e() {
+        var t = "no" + "op" + "fn",
+          n = "g" + "a",
+          e = "n" + "ame";
+        return window[n] && window[n][e] === t;
+      }
+      function r() {
+        return !(
+          !navigator.brave || "function" != typeof navigator.brave.isBrave
+        );
+      }
+      function o() {
+        return document.currentScript && document.currentScript.src;
+      }
+      function i(t) {
+        try {
+          (B.ex = t),
+            e() && -1 === B.ex.indexOf(R.uB) && (B.ex += R.uB),
+            r() && -1 === B.ex.indexOf(R.uBr) && (B.ex += R.uBr),
+            o() && -1 === B.ex.indexOf(R.nIL) && (B.ex += R.nIL),
+            window.ftr__snp_cwc || (B.ex += R.s),
+            F(B);
+        } catch (t) { }
+      }
+      function c(t, n) {
+        function e(o) {
+          try {
+            o.blockedURI === t && (n(), document.removeEventListener(r, e));
+          } catch (t) {
+            document.removeEventListener(r, e);
+          }
+        }
+        var r = "securitypolicyviolation";
+        document.addEventListener(r, e),
+          setTimeout(function () {
+            document.removeEventListener(r, e);
+          }, 2 * 60 * 1e3);
+      }
+      function a(t, n, e, r) {
+        var o = !1;
+        (t = "https://" + t),
+          c(t, function () {
+            r(!0), (o = !0);
+          });
+        var i = document.createElement("script");
+        (i.onerror = function () {
+          if (!o)
+            try {
+              r(!1), (o = !0);
+            } catch (t) { }
+        }),
+          (i.onload = e),
+          (i.type = "text/javascript"),
+          (i.id = "ftr__script"),
+          (i.async = !0),
+          (i.src = t);
+        var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(i, a);
+      }
+      function u(t, n, e, r) {
+        var o = !1,
+          i = new XMLHttpRequest();
+        if (
+          (c("https:" + t, function () {
+            e(new Error("CSP Violation"), !0), (o = !0);
+          }),
+            "withCredentials" in i)
+        )
+          i.open("GET", t, !0);
+        else {
+          if ("undefined" == typeof XDomainRequest) return;
+          (i = new XDomainRequest()), i.open("GET", t);
+        }
+        Object.keys(r).forEach(function (t) {
+          i.setRequestHeader(t, r[t]);
+        }),
+          (i.onload = function () {
+            "function" == typeof n && n(i);
+          }),
+          (i.onerror = function (t) {
+            if ("function" == typeof e && !o)
+              try {
+                e(t, !1), (o = !0);
+              } catch (t) { }
+          }),
+          (i.onprogress = function () { }),
+          (i.ontimeout = function () {
+            "function" == typeof e && e("tim" + "eo" + "ut", !1);
+          }),
+          setTimeout(function () {
+            i.send();
+          }, 0);
+      }
+      function d(t, siteId, n) {
+        function e(t) {
+          var n = t.toString(16);
+          return n.length % 2 ? "0" + n : n;
+        }
+        function r(t) {
+          if (t <= 0) return "";
+          for (var n = "0123456789abcdef", e = "", r = 0; r < t; r++)
+            e += n[Math.floor(Math.random() * n.length)];
+          return e;
+        }
+        function o(t) {
+          for (var n = "", r = 0; r < t.length; r++) n += e(t.charCodeAt(r));
+          return n;
+        }
+        function i(t) {
+          for (var n = t.split(""), e = 0; e < n.length; ++e)
+            n[e] = String.fromCharCode(255 ^ n[e].charCodeAt(0));
+          return n.join("");
+        }
+        n = n ? "1" : "0";
+        var c = [];
+        return (
+          c.push(t),
+          c.push(siteId),
+          c.push(n),
+          (function (t) {
+            var n = 40,
+              e = "";
+            return (
+              t.length < n / 2 && (e = "," + r(n / 2 - t.length - 1)),
+              o(i(t + e))
+            );
+          })(c.join(","))
+        );
+      }
+      function f() {
+        function t() {
+          C && (Q(R.dUAL), setTimeout(s, E, R.dUAL));
+        }
+        function n(t, n) {
+          i(n ? R.uAS + R.uF + R.cP : R.uAS + R.uF);
+        }
+        window.ftr__fdad(t, n);
+      }
+      function s(t) {
+        try {
+          var n = t === R.uDF ? q : C;
+          if (!n) return;
+          a(
+            n,
+            void 0,
+            function () {
+              try {
+                X(), i(t + R.uS);
+              } catch (t) { }
+            },
+            function (n) {
+              try {
+                X(),
+                  (B.td = 1 * new Date() - B.ts),
+                  i(n ? t + R.uF + R.cP : t + R.uF),
+                  t === R.uDF && f();
+              } catch (t) {
+                i(R.eUoe);
+              }
+            }
+          );
+        } catch (n) {
+          i(t + R.eTlu);
+        }
+      }
+      var h = "22g6otrwjeq6qsu1forxgiurqw1qhw2vwdwxv",
+        v = "fort",
+        w = "erTo",
+        l = "ken";
+      window.ftr__config = { m: merchantConfig, s: "15", si: siteId };
+      var m = !1,
+        p = v + w + l,
+        g = 10,
+        _ = {
+          write: function (t, n, e, r) {
+            void 0 === r && (r = !0);
+            var o, i;
+            if (
+              (e
+                ? ((o = new Date()),
+                  o.setTime(o.getTime() + 24 * e * 60 * 60 * 1e3),
+                  (i = "; expires=" + o.toGMTString()))
+                : (i = ""),
+                !r)
+            )
+              return void (document.cookie =
+                escape(t) + "=" + escape(n) + i + "; path=/");
+            for (
+              var c = 1, a = document.domain.split("."), u = g, d = !0;
+              d && a.length >= c && u > 0;
+
+            ) {
+              var f = a.slice(-c).join(".");
+              document.cookie =
+                escape(t) + "=" + escape(n) + i + "; path=/; domain=" + f;
+              var s = _.read(t);
+              (null != s && s == n) ||
+                ((f = "." + f),
+                  (document.cookie =
+                    escape(t) + "=" + escape(n) + i + "; path=/; domain=" + f)),
+                (d = -1 === document.cookie.indexOf(t + "=" + n)),
+                c++,
+                u--;
+            }
+          },
+          read: function (t) {
+            var n = null;
+            try {
+              for (
+                var e = escape(t) + "=",
+                r = document.cookie.split(";"),
+                o = 32,
+                i = 0;
+                i < r.length;
+                i++
+              ) {
+                for (var c = r[i]; c.charCodeAt(0) === o;)
+                  c = c.substring(1, c.length);
+                0 === c.indexOf(e) &&
+                  (n = unescape(c.substring(e.length, c.length)));
+              }
+            } finally {
+              return n;
+            }
+          },
+        },
+        y = window.ftr__config.s;
+      y += "ck";
+      var T = function (t) {
+        if (document.head) {
+          var n = (function () {
+            var n = document.createElement("link");
+            return (
+              n.setAttribute("rel", "pre" + "con" + "nect"),
+              n.setAttribute("cros" + "sori" + "gin", "anonymous"),
+              (n.onload = function () {
+                document.head.removeChild(n);
+              }),
+              (n.onerror = function (t) {
+                document.head.removeChild(n);
+              }),
+              n.setAttribute("href", t),
+              document.head.appendChild(n),
+              n
+            );
+          })();
+          setTimeout(function () {
+            document.head.removeChild(n);
+          }, 3e3);
+        }
+      },
+        S = 3,
+        x = n(h || "22g6otrwjeq6qsu1forxgiurqw1qhw2vwdwxv"),
+        A = t("[0Uhtxhvw0LG", -S),
+        L = t("[0Fruuhodwlrq0LG", -S),
+        k = t("Li0Qrqh0Pdwfk", -S),
+        C,
+        U = "fgq71iruwhu1frp",
+        q = n("(VQ(1" + U + "2vq2(VQ(2vfulsw1mv"),
+        D = n("(VQ(1" + U + "2vqV2(VQ(2vfulsw1mv"),
+        E = 10;
+      window.ftr__startScriptLoad = 1 * new Date();
+      var b = function (t) {
+        var n = "ft" + "r:tok" + "enR" + "eady";
+        window.ftr__tt && clearTimeout(window.ftr__tt),
+          (window.ftr__tt = setTimeout(function () {
+            try {
+              delete window.ftr__tt, (t += "_tt");
+              var e = document.createEvent("Event");
+              e.initEvent(n, !1, !1),
+                (e.detail = t),
+                document.dispatchEvent(e);
+            } catch (t) { }
+          }, 1e3));
+      },
+        F = function (t) {
+          var n = function (t) {
+            return t || "";
+          },
+            e =
+              n(t.id) +
+              "_" +
+              n(t.ts) +
+              "_" +
+              n(t.td) +
+              "_" +
+              n(t.ex) +
+              "_" +
+              n(y);
+          _.write(p, e, 400, !0), b(e), (window.ftr__gt = e);
+        },
+        I = function () {
+          var t = _.read(p) || "",
+            n = t.split("_"),
+            e = function (t) {
+              return n[t] || void 0;
+            };
+          return { id: e(0), ts: e(1), td: e(2), ex: e(3), vr: e(4) };
+        },
+        V = (function () {
+          for (var t = {}, n = "fgu", e = [], r = 0; r < 256; r++)
+            e[r] = (r < 16 ? "0" : "") + r.toString(16);
+          var o = function (t, n, r, o, i) {
+            var c = i ? "-" : "";
+            return (
+              e[255 & t] +
+              e[(t >> 8) & 255] +
+              e[(t >> 16) & 255] +
+              e[(t >> 24) & 255] +
+              c +
+              e[255 & n] +
+              e[(n >> 8) & 255] +
+              c +
+              e[((n >> 16) & 15) | 64] +
+              e[(n >> 24) & 255] +
+              c +
+              e[(63 & r) | 128] +
+              e[(r >> 8) & 255] +
+              c +
+              e[(r >> 16) & 255] +
+              e[(r >> 24) & 255] +
+              e[255 & o] +
+              e[(o >> 8) & 255] +
+              e[(o >> 16) & 255] +
+              e[(o >> 24) & 255]
+            );
+          },
+            i = function () {
+              if (
+                window.Uint32Array &&
+                window.crypto &&
+                window.crypto.getRandomValues
+              ) {
+                var t = new window.Uint32Array(4);
+                return (
+                  window.crypto.getRandomValues(t),
+                  { d0: t[0], d1: t[1], d2: t[2], d3: t[3] }
+                );
+              }
+              return {
+                d0: (4294967296 * Math.random()) >>> 0,
+                d1: (4294967296 * Math.random()) >>> 0,
+                d2: (4294967296 * Math.random()) >>> 0,
+                d3: (4294967296 * Math.random()) >>> 0,
+              };
+            },
+            c = function () {
+              var t = "",
+                n = function (t, n) {
+                  for (var e = "", r = t; r > 0; --r)
+                    e += n.charAt((1e3 * Math.random()) % n.length);
+                  return e;
+                };
+              return (
+                (t += n(2, "0123456789")),
+                (t += n(1, "123456789")),
+                (t += n(8, "0123456789"))
+              );
+            };
+          return (
+            (t.safeGenerateNoDash = function () {
+              try {
+                var t = i();
+                return o(t.d0, t.d1, t.d2, t.d3, !1);
+              } catch (t) {
+                try {
+                  return n + c();
+                } catch (t) { }
+              }
+            }),
+            (t.isValidNumericalToken = function (t) {
+              return (
+                t &&
+                t.toString().length <= 11 &&
+                t.length >= 9 &&
+                parseInt(t, 10).toString().length <= 11 &&
+                parseInt(t, 10).toString().length >= 9
+              );
+            }),
+            (t.isValidUUIDToken = function (t) {
+              return t && 32 === t.toString().length && /^[a-z0-9]+$/.test(t);
+            }),
+            (t.isValidFGUToken = function (t) {
+              return 0 == t.indexOf(n) && t.length >= 12;
+            }),
+            t
+          );
+        })(),
+        R = {
+          uDF: "UDF",
+          dUAL: "dUAL",
+          uAS: "UAS",
+          mLd: "1",
+          eTlu: "2",
+          eUoe: "3",
+          uS: "4",
+          uF: "9",
+          tmos: ["T5", "T10", "T15", "T30", "T60"],
+          tmosSecs: [5, 10, 15, 30, 60],
+          bIR: "43",
+          uB: "u",
+          uBr: "b",
+          cP: "c",
+          nIL: "i",
+          s: "s",
+        };
+      try {
+        var B = I();
+        try {
+          B.id &&
+            (V.isValidNumericalToken(B.id) ||
+              V.isValidUUIDToken(B.id) ||
+              V.isValidFGUToken(B.id))
+            ? (window.ftr__ncd = !1)
+            : ((B.id = V.safeGenerateNoDash()), (window.ftr__ncd = !0)),
+            (B.ts = window.ftr__startScriptLoad),
+            F(B),
+            (window.ftr__snp_cwc = !!_.read(p)),
+            window.ftr__snp_cwc || (q = D);
+          for (
+            var G = "for" + "ter" + ".co" + "m",
+            M = "ht" + "tps://c" + "dn9." + G,
+            O = "ht" + "tps://" + B.id + "-" + siteId + ".cd" + "n." + G,
+            j = "http" + "s://cd" + "n3." + G,
+            N = [M, O, j],
+            H = 0;
+            H < N.length;
+            H++
+          )
+            T(N[H]);
+          var P = new Array(R.tmosSecs.length),
+            Q = function (t) {
+              for (var n = 0; n < R.tmosSecs.length; n++)
+                P[n] = setTimeout(i, 1e3 * R.tmosSecs[n], t + R.tmos[n]);
+            },
+            X = function () {
+              for (var t = 0; t < R.tmosSecs.length; t++) clearTimeout(P[t]);
+            };
+          (window.ftr__fdad = function (n, e) {
+            if (!m) {
+              m = !0;
+              var r = {};
+              (r[k] = d(
+                window.ftr__config.s,
+                siteId,
+                window.ftr__config.m.csp
+              )),
+                u(
+                  x,
+                  function (e) {
+                    try {
+                      var r = e.getAllResponseHeaders().toLowerCase();
+                      if (r.indexOf(L.toLowerCase()) >= 0) {
+                        var o = e.getResponseHeader(L);
+                        window.ftr__altd2 = t(atob(o), -S - 1);
+                      }
+                      if (r.indexOf(A.toLowerCase()) < 0) return;
+                      var i = e.getResponseHeader(A),
+                        c = t(atob(i), -S - 1);
+                      if (c) {
+                        var a = c.split(":");
+                        if (a && 2 === a.length) {
+                          for (
+                            var u = a[0], d = a[1], f = "", s = 0, h = 0;
+                            s < 20;
+                            ++s
+                          )
+                            f +=
+                              s % 3 > 0 && h < 12
+                                ? siteId.charAt(h++)
+                                : B.id.charAt(s);
+                          var v = d.split(",");
+                          if (v.length > 1) {
+                            var w = v[0],
+                              l = v[1];
+                            C = u + "/" + w + "." + f + "." + l;
+                          }
+                        }
+                      }
+                      n();
+                    } catch (t) { }
+                  },
+                  function (t, n) {
+                    e && e(t, n);
+                  },
+                  r
+                );
+            }
+          }),
+            Q(R.uDF),
+            setTimeout(s, E, R.uDF);
+        } catch (t) {
+          i(R.mLd);
+        }
+      } catch (t) { }
+    })();
+  </script>
+  <script id="script-processout-5">
+    function loadRiskJs(attempt = 1) {
+      if (attempt <= 5) {
+        try {
+          if (typeof window.Risk !== "undefined") {
+            window.RiskJs = window.Risk.init(
+              "pk_6b7vb7srqgskhe7dmgqcatupbuk"
+            );
+          } else {
+            let riskJsScript = document.getElementById("risk-js");
+            if (riskJsScript) {
+              riskJsScript.addEventListener("load", () => {
+                window.RiskJs = window.Risk.init(
+                  "pk_6b7vb7srqgskhe7dmgqcatupbuk"
+                );
+              });
+            } else {
+              msSleep(100);
+              loadRiskJs(attempt + 1);
+            }
+          }
+        } catch (Error) {
+          console.error("Failed to load risk.js", Error);
+          reportErrMessage(
+            typeof Error.message !== "undefined" ? Error.message : Error
+          );
+          msSleep(100);
+          loadRiskJs(attempt + 1);
+        }
+      }
+    }
+
+    loadRiskJs();
+
+    async function msSleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    async function getRiskSessionId(attempt = 1) {
+      if (attempt <= 5 && null !== window.RiskJs) {
+        try {
+          return await window.RiskJs.publishRiskData();
+        } catch (Error) {
+          console.error("Failed to get risk.js SessionID", Error);
+          reportErrMessage(
+            typeof Error.message !== "undefined" ? Error.message : Error
+          );
+          await msSleep(200);
+          return await getRiskSessionId(attempt + 1);
+        }
+      }
+      return await new Promise((resolve) => {
+        resolve(null);
+      });
+    }
+
+    function reportErrMessage(message) {
+      console.error("Unexpected error", message);
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL4FQVG" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="app" data-v-app="">
+    <div class="cart">
+      <header data-v-292d34a3="" class="cart-header show">
+        <div data-v-292d34a3="" class="cart-header__main">
+          <!-- <div data-v-292d34a3="" class="d-flex align-items-center flex-grow">
+              <a
+                data-v-d86521e5=""
+                data-v-292d34a3=""
+                href="https://www.hostinger.com"
+                ><img
+                  data-v-d86521e5=""
+                  src="https://cart.hostinger.com/assets/hostinger-black.svg"
+                  class="cart-logo"
+                  alt="Hostinger"
+              /></a>
+            </div>
+            <div data-v-292d34a3="">
+              <div data-v-292d34a3="" id="cart-user-wrapper" class="cart-user">
+                <a id="hcart-login" class="d-none d-inline-block-md">Log in</a>
+              </div>
+            </div> -->
+        </div>
+      </header>
+      <main class="container flex-grow">
+        <div class="domain-select__wrapper">
+          <div class="app-container" ng-app="dateTimeApp" ng-controller="dateTimeCtrl as ctrl" ng-cloak>
+
+            <div date-picker datepicker-title="Select Date" picktime="true" pickdate="true" pickpast="false"
+              mondayfirst="false" custom-message="You have selected" selecteddate="ctrl.selected_date"
+              updatefn="ctrl.updateDate(newdate)">
+
+              <div class="datepicker" ng-class="{
+                        'am': timeframe == 'am',
+                        'pm': timeframe == 'pm',
+                        'compact': compact
+                    }">
+                <div class="datepicker-header">
+                  <div class="datepicker-title" ng-if="datepicker_title">{{ datepickerTitle }}</div>
+                  <div class="datepicker-subheader">{{ customMessage }} {{ selectedDay }} {{
+                    monthNames[localdate.getMonth()] }} {{ localdate.getDate() }}, {{ localdate.getFullYear() }}</div>
+                </div>
+                <div class="datepicker-calendar">
+                  <div class="calendar-header">
+                    <div class="goback" ng-click="moveBack()" ng-if="pickdate">
+                      <svg width="30" height="30">
+                        <path fill="none" stroke="#0DAD83" stroke-width="3" d="M19,6 l-9,9 l9,9" />
+                      </svg>
+                    </div>
+                    <div class="current-month-container">{{ currentViewDate.getFullYear() }} {{ currentMonthName() }}
+                    </div>
+                    <div class="goforward" ng-click="moveForward()" ng-if="pickdate">
+                      <svg width="30" height="30">
+                        <path fill="none" stroke="#0DAD83" stroke-width="3" d="M11,6 l9,9 l-9,9" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="calendar-day-header">
+                    <span ng-repeat="day in days" class="day-label">{{ day.short }}</span>
+                  </div>
+                  <div class="calendar-grid" ng-class="{false: 'no-hover'}[pickdate]">
+                    <div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer"
+                      ng-style="{'margin-left': calcOffset(day, $index)}" track by $index>
+                      <div class="datenumber" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                        {{ day.daydate }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timepicker" ng-if="picktime == 'true'">
+                  <div ng-class="{'am': timeframe == 'am', 'pm': timeframe == 'pm' }">
+                    <div class="timepicker-container-outer" selectedtime="time" timetravel>
+                      <div class="timepicker-container-inner">
+                        <div class="timeline-container" ng-mousedown="timeSelectStart($event)"
+                          sm-touchstart="timeSelectStart($event)">
+                          <div class="current-time">
+                            <div class="actual-time">{{ time }}</div>
+                          </div>
+                          <div class="timeline">
+                          </div>
+                          <div class="hours-container">
+                            <div class="hour-mark" ng-repeat="hour in getHours() track by $index"></div>
+                          </div>
+                        </div>
+                        <div class="display-time">
+                          <div class="decrement-time" ng-click="adjustTime('decrease')">
+                            <svg width="24" height="24">
+                              <path stroke="white" stroke-width="2" d="M8,12 h8" />
+                            </svg>
+                          </div>
+                          <div class="time" ng-class="{'time-active': edittime.active}">
+                            <input type="text" class="time-input" ng-model="edittime.input"
+                              ng-keydown="changeInputTime($event)"
+                              ng-focus="edittime.active = true; edittime.digits = [];"
+                              ng-blur="edittime.active = false" />
+                            <div class="formatted-time">{{ edittime.formatted }}</div>
+                          </div>
+                          <div class="increment-time" ng-click="adjustTime('increase')">
+                            <svg width="24" height="24">
+                              <path stroke="white" stroke-width="2" d="M12,7 v10 M7,12 h10" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="am-pm-container">
+                          <div class="am-pm-button" ng-click="changetime('am');">am</div>
+                          <div class="am-pm-button" ng-click="changetime('pm');">pm</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="buttons-container">
+                        <div class="cancel-button">CANCEL</div>
+                        <div class="save-button">SAVE</div>
+                    </div> -->
+
+              </div>
+            </div>
+          </div>
+          <!-- <div class="pp-upsell__wrapper pp-addon">
+              <div class="separator"></div>
+              <div class="pp-upsell__content">
+                <div class="pp-upsell__details">
+                  <p class="pp-upsell__text">
+                    <strong>FREE</strong> domain privacy protection included
+                  </p>
+                  <span
+                    data-v-b45ae079=""
+                    class="h-icon h-ml-8 h-tooltip-activator"
+                    ><svg
+                      data-v-b45ae079=""
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="18"
+                      width="18"
+                      viewBox="0 0 24 24"
+                      aria-labelledby="help"
+                      role="presentation"
+                      class="h-icon primary"
+                    >
+                      <g data-v-b45ae079="">
+                        <path
+                          data-v-b45ae079=""
+                          d="M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C16.4301 4 20 7.56988 20 12C20 16.4301 16.4301 20 12 20C7.56988 20 4 16.4301 4 12C4 7.56988 7.56988 4 12 4ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 12 11 12.367 11 15H13C13 13.349 16 12.5 16 10C16 7.79 14.21 6 12 6ZM11 16V18H13V16H11Z"
+                        ></path>
+                      </g></svg
+                  ></span>
+                  <div
+                    class="h-tooltip"
+                    role="tooltip"
+                    data-popper-placement="top"
+                    style="
+                      position: absolute;
+                      inset: auto auto 0px 0px;
+                      margin: 0px;
+                      transform: translate(615px, -252px);
+                    "
+                  >
+                    <span class="h-tooltip__content"
+                      >Domain privacy protection hides your personal
+                      information. It helps to avoid spam and keeps your data
+                      safe from the public.</span
+                    >
+                    <div
+                      class="h-tooltip__arrow"
+                      data-popper-arrow=""
+                      style="
+                        position: absolute;
+                        left: 0px;
+                        transform: translate(96px, 0px);
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <p class="selected-price pp-upsell__text h-ml-8">
+                  <strong>$0.00</strong>
+                </p>
+              </div>
+            </div> -->
+        </div>
+        <div class="cart-step select-payment h-py-32 h-py-48-lg">
+          <h2 class="cart-step__title h-mt-0 h-mb-32">Select payment</h2>
+          <div class="select-payment__main">
+            <div class="select-payment__container d-flex align-items-flex-start">
+              <div class="select-payment__method h-mr-24-lg">
+                <div data-v-409bbce1="" id="hcart-payment-method-select-processout"
+                  class="payment-method payment-method--active">
+                  <label data-v-409bbce1="" class="h-radio h-radio--sm h-mr-16"><input type="radio"
+                      name="h-radio-select" class="h-radio__input active" value="processout" /><span
+                      class="h-radio__box"></span>
+                    <h4 data-v-409bbce1="" class="h-my-0 h-ml-8">
+                      Credit Card
+                    </h4>
+                  </label>
+                  <div data-v-409bbce1="" class="payment-method__method-logo">
+                    <img data-v-409bbce1="" src="https://cart.hostinger.com/assets/payments/processout.svg"
+                      class="payment-method__method-logo__img" alt="Credit Card" />
+                  </div>
+                </div>
+                <!-- <div data-v-409bbce1="" id="hcart-payment-method-select-braintree_paypal" class="payment-method">
+                  <label data-v-409bbce1="" class="h-radio h-radio--sm h-mr-16"><input type="radio"
+                      name="h-radio-select" class="h-radio__input" value="braintree_paypal" /><span
+                      class="h-radio__box"></span>
+                    <h4 data-v-409bbce1="" class="h-my-0 h-ml-8">PayPal</h4>
+                  </label>
+                  <div data-v-409bbce1="" class="payment-method__method-logo">
+                    <img data-v-409bbce1="" src="https://cart.hostinger.com/assets/payments/braintree_paypal.svg"
+                      class="payment-method__method-logo__img" alt="PayPal" />
+                  </div>
+                </div>
+                <div data-v-409bbce1="" id="hcart-payment-method-select-checkout_googlepay" class="payment-method">
+                  <label data-v-409bbce1="" class="h-radio h-radio--sm h-mr-16"><input type="radio"
+                      name="h-radio-select" class="h-radio__input" value="checkout.googlepay" /><span
+                      class="h-radio__box"></span>
+                    <h4 data-v-409bbce1="" class="h-my-0 h-ml-8">
+                      Google Pay
+                    </h4>
+                  </label>
+                  <div data-v-409bbce1="" class="payment-method__method-logo">
+                    <img data-v-409bbce1="" src="https://cart.hostinger.com/assets/payments/checkout.googlepay.svg"
+                      class="payment-method__method-logo__img" alt="Google Pay" />
+                  </div>
+                </div>
+                <div data-v-409bbce1="" id="hcart-payment-method-select-payssion_alipay_cn" class="payment-method">
+                  <label data-v-409bbce1="" class="h-radio h-radio--sm h-mr-16"><input type="radio"
+                      name="h-radio-select" class="h-radio__input" value="payssion.alipay_cn" /><span
+                      class="h-radio__box"></span>
+                    <h4 data-v-409bbce1="" class="h-my-0 h-ml-8">AliPay</h4>
+                  </label>
+                  <div data-v-409bbce1="" class="payment-method__method-logo">
+                    <img data-v-409bbce1="" src="https://cart.hostinger.com/assets/payments/payssion.alipay_cn.svg"
+                      class="payment-method__method-logo__img" alt="AliPay" />
+                  </div>
+                </div>
+                <div data-v-409bbce1="" id="hcart-payment-method-select-coingate" class="payment-method">
+                  <label data-v-409bbce1="" class="h-radio h-radio--sm h-mr-16"><input type="radio"
+                      name="h-radio-select" class="h-radio__input" value="coingate" /><span class="h-radio__box"></span>
+                    <h4 data-v-409bbce1="" class="h-my-0 h-ml-8">Coingate</h4>
+                  </label>
+                  <div data-v-409bbce1="" class="payment-method__method-logo">
+                    <img data-v-409bbce1="" src="https://cart.hostinger.com/assets/payments/coingate.svg"
+                      class="payment-method__method-logo__img" alt="Coingate" />
+                  </div>
+                </div> -->
+              </div>
+              <div data-v-a3570af3="" id="payment-overview" class="payment-overview">
+                <div data-v-a3570af3="">
+                  <div data-v-dba9e19c="" data-v-a3570af3="" class="hcart-estimate">
+                    <div data-v-dba9e19c="" class="hcart-estimate__info">
+                      <div data-v-89c175c7="" data-v-dba9e19c=""
+                        class="hcart-estimate__plan-info hcart-estimate__domain-margin">
+                        <div data-v-89c175c7="" class="d-flex align-items-center">
+                          <div data-v-89c175c7="" class="flex-grow d-none d-flex-md">
+                            <h4 data-v-89c175c7=""
+                              class="plan-info__plan-name d-flex flex-grow h-my-0 align-items-center" id="titleDesktop">
+                            </h4>
+                          </div>
+                          <div data-v-89c175c7="" class="flex-grow d-none-md">
+                            <h4 data-v-89c175c7="" class="plan-info__plan-name h-my-0 align-items-center"
+                              id="titleMobile">
+                            </h4>
+                          </div>
+                        </div>
+                        <br></br>
+
+                        <!-- <iframe src="../calender2/"></iframe> -->
+
+                        <!-- <div data-v-89c175c7="" class="hcart-estimate__perks">
+                          <div data-v-89c175c7="" class="d-flex justify-content-space-between align-items-center">
+                            <div data-v-89c175c7="" class="d-flex align-items-center">
+                              <span data-v-b45ae079="" data-v-89c175c7="" class="h-icon h-mr-8 d-flex">
+
+                                
+                                <div class="domain-select__reigstration w-100 d-flex justify-content-space-between">
+                                  <iframe src="../calender2/"></iframe>
+                                <div class="d-none d-block-md">
+                                  <div class="help h-mt-2 d-none d-block-lg">
+                                    <div>
+                                      <svg data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 24 24" aria-labelledby="check" role="presentation" class="h-icon success">
+                                        <g data-v-b45ae079="">
+                                          <path data-v-b45ae079=""
+                                            d="M19.9999 8.34412C20.0039 8.60343 19.8989 8.85254 19.7105 9.03076L12.2373 16.3439L10.8333 17.7171C10.648 17.9023 10.3953 18.0044 10.1334 17.9998C9.87044 18.0051 9.61672 17.903 9.4307 17.7171L8.02672 16.3439L4.28944 12.6866C4.10103 12.5084 3.99607 12.2593 4.00011 12C4.00011 11.7307 4.09611 11.5013 4.28944 11.3134L5.69342 9.94007C5.87889 9.75404 6.13209 9.65152 6.39474 9.65608C6.67074 9.65608 6.90407 9.75074 7.0974 9.94007L10.132 12.9186L16.9026 6.28285C17.0886 6.09698 17.3423 5.99492 17.6052 6.00019C17.8799 6.00019 18.1146 6.09353 18.3066 6.28285L19.7105 7.65614C19.8993 7.83468 20.0043 8.08434 19.9999 8.34412V8.34412Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                      <span> APPLICATION FIX </span>
+                                    </div>
+                                  </div>
+                                  <div class="help h-mt-2 d-none d-block-lg">
+                                    <div>
+                                      <svg data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 24 24" aria-labelledby="check" role="presentation" class="h-icon success">
+                                        <g data-v-b45ae079="">
+                                          <path data-v-b45ae079=""
+                                            d="M19.9999 8.34412C20.0039 8.60343 19.8989 8.85254 19.7105 9.03076L12.2373 16.3439L10.8333 17.7171C10.648 17.9023 10.3953 18.0044 10.1334 17.9998C9.87044 18.0051 9.61672 17.903 9.4307 17.7171L8.02672 16.3439L4.28944 12.6866C4.10103 12.5084 3.99607 12.2593 4.00011 12C4.00011 11.7307 4.09611 11.5013 4.28944 11.3134L5.69342 9.94007C5.87889 9.75404 6.13209 9.65152 6.39474 9.65608C6.67074 9.65608 6.90407 9.75074 7.0974 9.94007L10.132 12.9186L16.9026 6.28285C17.0886 6.09698 17.3423 5.99492 17.6052 6.00019C17.8799 6.00019 18.1146 6.09353 18.3066 6.28285L19.7105 7.65614C19.8993 7.83468 20.0043 8.08434 19.9999 8.34412V8.34412Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                      <span> SOFTWARE UPDATE </span>
+                                    </div>
+                                  </div>
+                                  <div class="help h-mt-2 d-none d-block-lg">
+                                    <div>
+                                      <svg data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 24 24" aria-labelledby="check" role="presentation" class="h-icon success">
+                                        <g data-v-b45ae079="">
+                                          <path data-v-b45ae079=""
+                                            d="M19.9999 8.34412C20.0039 8.60343 19.8989 8.85254 19.7105 9.03076L12.2373 16.3439L10.8333 17.7171C10.648 17.9023 10.3953 18.0044 10.1334 17.9998C9.87044 18.0051 9.61672 17.903 9.4307 17.7171L8.02672 16.3439L4.28944 12.6866C4.10103 12.5084 3.99607 12.2593 4.00011 12C4.00011 11.7307 4.09611 11.5013 4.28944 11.3134L5.69342 9.94007C5.87889 9.75404 6.13209 9.65152 6.39474 9.65608C6.67074 9.65608 6.90407 9.75074 7.0974 9.94007L10.132 12.9186L16.9026 6.28285C17.0886 6.09698 17.3423 5.99492 17.6052 6.00019C17.8799 6.00019 18.1146 6.09353 18.3066 6.28285L19.7105 7.65614C19.8993 7.83468 20.0043 8.08434 19.9999 8.34412V8.34412Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                      <span> STORAGE AND BACK UP </span>
+                                    </div>
+                                  </div>
+                                  <div class="help h-mt-2 d-none d-block-lg">
+                                    <div>
+                                      <svg data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 24 24" aria-labelledby="check" role="presentation" class="h-icon success">
+                                        <g data-v-b45ae079="">
+                                          <path data-v-b45ae079=""
+                                            d="M19.9999 8.34412C20.0039 8.60343 19.8989 8.85254 19.7105 9.03076L12.2373 16.3439L10.8333 17.7171C10.648 17.9023 10.3953 18.0044 10.1334 17.9998C9.87044 18.0051 9.61672 17.903 9.4307 17.7171L8.02672 16.3439L4.28944 12.6866C4.10103 12.5084 3.99607 12.2593 4.00011 12C4.00011 11.7307 4.09611 11.5013 4.28944 11.3134L5.69342 9.94007C5.87889 9.75404 6.13209 9.65152 6.39474 9.65608C6.67074 9.65608 6.90407 9.75074 7.0974 9.94007L10.132 12.9186L16.9026 6.28285C17.0886 6.09698 17.3423 5.99492 17.6052 6.00019C17.8799 6.00019 18.1146 6.09353 18.3066 6.28285L19.7105 7.65614C19.8993 7.83468 20.0043 8.08434 19.9999 8.34412V8.34412Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                      <span> DATA TRANSFER SAFETY </span>
+                                    </div>
+                                  </div>
+                                  <div class="help h-mt-2 d-none d-block-lg">
+                                    <div>
+                                      <svg data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 24 24" aria-labelledby="check" role="presentation" class="h-icon success">
+                                        <g data-v-b45ae079="">
+                                          <path data-v-b45ae079=""
+                                            d="M19.9999 8.34412C20.0039 8.60343 19.8989 8.85254 19.7105 9.03076L12.2373 16.3439L10.8333 17.7171C10.648 17.9023 10.3953 18.0044 10.1334 17.9998C9.87044 18.0051 9.61672 17.903 9.4307 17.7171L8.02672 16.3439L4.28944 12.6866C4.10103 12.5084 3.99607 12.2593 4.00011 12C4.00011 11.7307 4.09611 11.5013 4.28944 11.3134L5.69342 9.94007C5.87889 9.75404 6.13209 9.65152 6.39474 9.65608C6.67074 9.65608 6.90407 9.75074 7.0974 9.94007L10.132 12.9186L16.9026 6.28285C17.0886 6.09698 17.3423 5.99492 17.6052 6.00019C17.8799 6.00019 18.1146 6.09353 18.3066 6.28285L19.7105 7.65614C19.8993 7.83468 20.0043 8.08434 19.9999 8.34412V8.34412Z">
+                                          </path>
+                                        </g>
+                                      </svg>
+                                      <span> MEMORY AND CACHE CLEAN </span>
+                                    </div>
+                                  </div>
+                                  <div class="help h-mt-2 d-none d-block-lg">
+                                    <div>
+                                      <svg data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 24 24" aria-labelledby="check" role="presentation" class="h-icon success">
+                                        <g data-v-b45ae079="">
+                                          <path data-v-b45ae079=""
+                                            d="M19.9999 8.34412C20.0039 8.60343 19.8989 8.85254 19.7105 9.03076L12.2373 16.3439L10.8333 17.7171C10.648 17.9023 10.3953 18.0044 10.1334 17.9998C9.87044 18.0051 9.61672 17.903 9.4307 17.7171L8.02672 16.3439L4.28944 12.6866C4.10103 12.5084 3.99607 12.2593 4.00011 12C4.00011 11.7307 4.09611 11.5013 4.28944 11.3134L5.69342 9.94007C5.87889 9.75404 6.13209 9.65152 6.39474 9.65608C6.67074 9.65608 6.90407 9.75074 7.0974 9.94007L10.132 12.9186L16.9026 6.28285C17.0886 6.09698 17.3423 5.99492 17.6052 6.00019C17.8799 6.00019 18.1146 6.09353 18.3066 6.28285L19.7105 7.65614C19.8993 7.83468 20.0043 8.08434 19.9999 8.34412V8.34412Z">
+                                          </path>
+                                        </g>
+                                      </svg><span> BATTERY OPTIMAZATION </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <h3 class="d-none-md">Registration</h3>
+                                <div class="domain-select__price--md h-mb-16">
+                                  <h4>$39.99</h4>
+                                  <div class="old-price h-mt-4 body-1">$49.99</div>
+                                </div>
+                              </div></span>
+                            <div class="payment-addon__pricing">
+                              <h5 class="payment-addon__price">$0.00</h5>
+                              <div class="domain-select__chip domain-select__chip--empty">
+                                <div class="h-chip inline-flex success w-100">
+                                  <div class="h-chip__content">SAVE 20%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div data-v-dba9e19c="" class="hcart-estimate__details">
+                      <div data-v-dba9e19c="" class="location-select">
+                        <div class="input-line h-mt-0">
+                          <div class="h-input primary cc-short-input h-mr-12" id="first-name-input">
+                            <div class="h-input__input-wrapper">
+                              <input class="h-input__input" placeholder="First Name" password="false" id="firstName"
+                                type="text" digitonly="return event.keyCode !== 69" />
+                              <div class="h-form-field-icon"></div>
+                            </div>
+                          </div>
+                          <div class="h-input primary cc-short-input" id="last-name-input">
+                            <div class="h-input__input-wrapper">
+                              <input class="h-input__input" placeholder="Last Name" id="lastName" password="false"
+                                type="text" digitonly="return event.keyCode !== 69" />
+                              <div class="h-form-field-icon"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-line">
+                          <div class="h-input primary cc-short-input h-mr-12" id="first-name-input">
+                            <div class="h-input__input-wrapper">
+                              <input class="h-input__input" placeholder="Email Address" password="false"
+                                id="emailAddress" type="text" digitonly="return event.keyCode !== 69" />
+                              <div class="h-form-field-icon"></div>
+                            </div>
+                          </div>
+                          <div class="h-input primary cc-short-input" id="last-name-input">
+                            <div class="h-input__input-wrapper">
+                              <input class="h-input__input" placeholder="Mobile Number" id="mobileNumber"
+                                password="false" type="text" digitonly="return event.keyCode !== 69" />
+                              <div class="h-form-field-icon"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="h-select location-select__country-dropdown w-100 h-mt-12" id="country-select">
+                          <div class="h-input primary">
+                            <div class="h-input__input-wrapper">
+                              <div
+                                class="h-form-field-label h-form-field-label--filled h-form-field-label--force-focused">
+                                Country
+                              </div>
+                              <input class="h-input__input" placeholder="" password="false" type="text" readonly=""
+                                digitonly="return event.keyCode !== 69" />
+                              <div class="h-form-field-icon">
+                                <span data-v-b45ae079="" class="h-icon" style=""><svg data-v-b45ae079=""
+                                    xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"
+                                    aria-labelledby="arrowDown" role="presentation" class="h-icon primary">
+                                    <g data-v-b45ae079="">
+                                      <path data-v-b45ae079=""
+                                        d="M7.41 8.59L12 13.17L16.59 8.59L18 10L12 16L6 10L7.41 8.59Z"></path>
+                                    </g>
+                                  </svg></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div> -->
+                        <form id="location-form">
+                          <div class="input-line">
+                            <div class="h-input primary location-select__region h-mr-12 w-100">
+                              <div class="h-input__input-wrapper">
+                                <!-- <div class="h-form-field-label">
+                                  Region/province
+                                </div> -->
+                                <input class="h-input__input" placeholder="Region/province" id="region" password="false" type="text"
+                                  digitonly="return event.keyCode !== 69" />
+                                <div class="h-form-field-icon"></div>
+                              </div>
+                            </div>
+                            <div class="h-input primary cc-short-input"  type="text">
+                              <div class="h-input__input-wrapper">
+                                <!-- <div class="h-form-field-label">
+                                  City
+                                </div> -->
+                                <input class="h-input__input" placeholder="City" id="city" password="false" type="text"
+                                  digitonly="return event.keyCode !== 69" />
+                                <div class="h-form-field-icon"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-line">
+                            <div class="h-input primary cc-short-input location-select__state-dropdown"
+                               type="text">
+                              <div class="h-input__input-wrapper">
+                                <!-- <div class="h-form-field-label">
+                                  Street Address
+                                </div> -->
+                                <input class="h-input__input" placeholder="Street Address" id="address" password="false" type="text"
+                                  digitonly="return event.keyCode !== 69" />
+                                <div class="h-form-field-icon"></div>
+                              </div>
+                            </div>
+                            <div class="h-input primary cc-short-input"  type="text">
+                              <div class="h-input__input-wrapper">
+                                <!-- <div class="h-form-field-label">
+                                  ZIP code
+                                </div> -->
+                                <input class="h-input__input" placeholder="Postal Code" id="zipCode" password="false" type="text"
+                                  digitonly="return event.keyCode !== 69" />
+                                <div class="h-form-field-icon"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!-- <div data-v-dba9e19c="" class="hcart-estimate__discounts">
+                        <div data-v-dba9e19c="" class="hcart-estimate__line-title">
+                          Plan Discount - 20%
+                        </div>
+                        <h4 data-v-dba9e19c="" class="hcart-estimate__price body-1 success">
+                          -$10.00
+                        </h4>
+                      </div> -->
+                      <div data-v-dba9e19c="" class="hcart-estimate__discounts">
+                        <div data-v-dba9e19c="" class="hcart-estimate__line-title">
+                          Taxes &amp; Fees
+                          <span data-v-b45ae079="" data-v-dba9e19c="" class="h-icon h-ml-8 h-tooltip-activator"><svg
+                              data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="18" width="18"
+                              viewBox="0 0 24 24" aria-labelledby="help" role="presentation" class="h-icon primary">
+                              <g data-v-b45ae079="">
+                                <path data-v-b45ae079=""
+                                  d="M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C16.4301 4 20 7.56988 20 12C20 16.4301 16.4301 20 12 20C7.56988 20 4 16.4301 4 12C4 7.56988 7.56988 4 12 4ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 12 11 12.367 11 15H13C13 13.349 16 12.5 16 10C16 7.79 14.21 6 12 6ZM11 16V18H13V16H11Z">
+                                </path>
+                              </g>
+                            </svg></span>
+                          <div class="h-tooltip" role="tooltip" data-popper-reference-hidden="" data-popper-escaped=""
+                            data-popper-placement="top" style="
+                                position: absolute;
+                                inset: auto auto 0px 0px;
+                                margin: 0px;
+                                transform: translate(810px, 774px);
+                              ">
+                            <span class="h-tooltip__content">Taxes &amp; fees include 0% VAT and $0.00 ICANN
+                              fee.</span>
+                            <div class="h-tooltip__arrow" data-popper-arrow="" style="
+                                  position: absolute;
+                                  left: 0px;
+                                  transform: translate(96px, 0px);
+                                "></div>
+                          </div>
+                        </div>
+                        <h4 data-v-dba9e19c="" class="hcart-estimate__price body-1">
+                          £0.00
+                        </h4>
+                      </div>
+                    </div>
+                    <div data-v-dba9e19c="" class="hcart-estimate__total">
+                      <div data-v-dba9e19c="" class="d-flex align-items-center justify-content-space-between">
+                        <div data-v-dba9e19c="" class="hcart-estimate__line-title">
+                          <h3 data-v-dba9e19c="">Total</h3>
+                        </div>
+                        <div data-v-dba9e19c="" class="d-flex align-items-center">
+                          <!-- <div data-v-dba9e19c="" class="old-price">
+                            $49.99
+                          </div> -->
+                          <h3 data-v-dba9e19c="" class="hcart-estimate__price body-1" id="servicePricing">
+                          </h3>
+                        </div>
+                      </div>
+                      <!-- <div data-v-dba9e19c="">
+                        <div data-v-dba9e19c="" class="hcart-estimate__coupon d-flex h-mt-24">
+                          <a data-v-dba9e19c="" id="hcart-have-a-coupon-btn" class="f-button">Have a coupon code?</a>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                <div data-v-a3570af3="" class="h-mt-24">
+                  <div>
+                    <script src="https://js.processout.com/processout.js"></script>
+                    <script>
+                      window.loadedCorrections = {
+                        "Transaction has been declined.":
+                          "Transaction was declined by bank. Please contact your card issuing bank.",
+                        "Authentication was attempted but could not be completed":
+                          "3DS authentication has failed, please try again.",
+                        "The card CVC is invalid.":
+                          "Please enter correct CVC number.",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed.":
+                          "5 - The payment authorization has failed, please contact your bank",
+                        "Rejected due to high risk.":
+                          "12 - The payment was rejected due to security concerns. Please contact us.",
+                        "The customer canceled the payment.":
+                          "The payment window was closed, please try again",
+                        "Unsupported card type.":
+                          "14 - Unsupported card type. Please use a different card.",
+                        "The challenge authentication has failed":
+                          "3DS authentication has failed, please try again.",
+                        "The card CVC is required.":
+                          "17 - Please enter correct CVC number",
+                        "Declined - Do Not Honour":
+                          "The transaction was declined please contact your bank or try other payment method.",
+                        "The card number is invalid.":
+                          "Please enter correct card number.",
+                        "O n\u00famero do cart\u00e3o \u00e9 inv\u00e1lido.":
+                          "Please enter correct card number",
+                        "Exceeds Withdrawal Value\/Amount Limits":
+                          "25 - Card limits reached. Please contact your bank.",
+                        "Card requested by the bank.":
+                          "26 - The transaction was declined. Please contact your bank.",
+                        "The card expiry year is invalid.":
+                          "Please enter correct card expiration date.",
+                        "There seems to be some connectivity issue preventing the payment from making it through. Please switch to another network or try again in a few minutes.":
+                          [
+                            "Connection interrupted, please check your internet connection and try again.",
+                            "179 - Connection interrupted, please check your internet connection and try again",
+                          ],
+                        "Gateway Rejected: cvv":
+                          "32 - Please enter correct CVV number",
+                        "The payment was rejected.":
+                          "The transaction was declined. Please contact your bank.",
+                        "The 3DS authentication has been refused":
+                          "3DS authentication has failed, please try again.",
+                        "Insufficient Funds":
+                          "Payment has failed due to not enough funds. Check available funds on your payment card or add new payment card and try again.",
+                        "Stripe blocked this payment as too risky.":
+                          "39 - The payment was rejected due to security concerns. Please contact us.",
+                        "Rejected by bank.":
+                          "The transaction was declined. Please contact your bank.",
+                        "Decline for CVV2 Failure":
+                          "41 - Please enter correct CVV number",
+                        "The bank returned the decline code `incorrect_cvc`.":
+                          "43 - Please enter correct CVC number",
+                        "Do Not Honor":
+                          "46 - The transaction was declined. Please contact your bank.",
+                        "Expired Card":
+                          "47 - The card is expired, please use another card",
+                        "The 3DS authentication failed, so the transaction was blocked from being authorized. Please create a new invoice to re-start the 3DS flow and\/or make an authorization.":
+                          "48 - The payment authorization has failed, please try again",
+                        "El mes de vencimiento de la tarjeta no es v\u00e1lido.":
+                          "49 - Please enter correct card expiry month",
+                        "Transaction not Permitted to Cardholder":
+                          "50 - The transaction was declined. Please contact your bank.",
+                        "Limit Exceeded":
+                          "52 - Transaction limit reached, please contact us",
+                        "card.failed-3ds":
+                          "53 - The payment authorization has failed, please try again",
+                        "The bank returned the decline code `do_not_honor`.":
+                          "54 - The transaction was declined. Please contact your bank.",
+                        "Your transaction was declined.":
+                          "Transaction was declined by bank. Please contact your card issuing bank.",
+                        cvv_invalid: "57 - Please enter correct CVV number",
+                        "The card expiry date is invalid.":
+                          "59 - Please enter correct card expiry date",
+                        "Processor Declined":
+                          "60 - The transaction was declined. Please contact your bank.",
+                        "The ProcessOut.js credit card field is unavailable.":
+                          "Connection interrupted, please check your internet connection and try again.",
+                        "The card expiration year was invalid":
+                          "62 - Please enter correct card expiry year",
+                        "Invalid Card Number":
+                          "64 - Please enter correct card number",
+                        "\u0634\u0647\u0631 \u0627\u0646\u062a\u0647\u0627\u0621 \u0635\u0644\u0627\u062d\u064a\u0629 \u0627\u0644\u0628\u0637\u0627\u0642\u0629 \u063a\u064a\u0631 \u0635\u0627\u0644\u062d.":
+                          "70 - Please enter correct card expiry month",
+                        "Insufficient amount.":
+                          "Payment has failed due to not enough funds. Check available funds on your payment card or add new payment card and try again.",
+                        "Gateway Reject - Card Number Blacklist":
+                          "74 - The payment was rejected due to security concerns. Please contact us.",
+                        "Invalid Transaction":
+                          "77 - Please enter correct billing information",
+                        "O cart\u00e3o CVC \u00e9 obrigat\u00f3rio.":
+                          "80 - Please enter correct CVC number",
+                        "O m\u00eas de validade do cart\u00e3o \u00e9 inv\u00e1lido.":
+                          "81 - Please enter correct card expiry month",
+                        "GSTIN format is invalid.":
+                          "84 - Please enter correct GSTIN number",
+                        "Card cannot be identified":
+                          "88 - Card cannot be identified",
+                        "Call bank for authorize.":
+                          "Contact your bank to authorize the payment.",
+                        "Restricted Card":
+                          "91 - The transaction was declined. Please contact your bank.",
+                        "Stolen Card - Pick Up":
+                          "93 - The transaction was declined. Please contact us.",
+                        "Card expired.":
+                          "94 - The card is expired, please use another card",
+                        "El mes de vencimiento de la tarjeta no es v\u00e1lido":
+                          "95 - Please enter correct card expiry month",
+                        "Your 3D-Secure payment failed.":
+                          "100 - The payment authorization has failed, please try again",
+                        "40161 - Email velocity - Daily - All transactions - Decline":
+                          "103 - Transaction limit reached, please try again in 24 hours",
+                        "The card expiration month was invalid":
+                          "110 - Please enter correct card expiry month",
+                        "Gateway Reject - BIN Number Blacklist":
+                          "111 - The payment was rejected due to security concerns. Please contact us.",
+                        "The card expiry month is invalid.":
+                          "112 - Please enter correct card expiry month",
+                        "Invalid card number.":
+                          "115 - Please enter correct card number",
+                        "At least one of input parameters is malformed. Parameter [b5] CVV is not valid.":
+                          "117 - Please enter correct CVV number",
+                        "card.failed-3ds-technical":
+                          "119 - The payment authorization has failed, please try again",
+                        "User blacklisted":
+                          "124 - The payment was rejected due to security concerns. Please contact us.",
+                        "La carte CVC est requise.":
+                          "128 - Please enter correct CVC number",
+                        "Le mois d'expiration de la carte n'\u00e9tait pas valable":
+                          "129 - Please enter correct card expiry month",
+                        "Se requiere la tarjeta CVC.":
+                          "132 - Please enter correct CVC number",
+                        "No Such Issuer":
+                          "137 - Please enter correct card number",
+                        "Document ID format is invalid.":
+                          "138 - Invalid Document ID format",
+                        "Suspected Fraud":
+                          "Payment attempt failed. Please retry or try other payment method.",
+                        "The bank returned the decline code `insufficient_funds`.":
+                          "149 - Insufficient funds, please check the balance",
+                        "Gateway Reject - Email Blacklist":
+                          "158 - The payment was rejected due to security concerns. Please contact us.",
+                        "\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043c\u0435\u0441\u044f\u0446 \u0438\u0441\u0442\u0435\u0447\u0435\u043d\u0438\u044f \u0441\u0440\u043e\u043a\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f \u043a\u0430\u0440\u0442\u044b":
+                          "160 - Please enter correct card expiry month",
+                        "CVC must have 4 digits for American Express cards":
+                          "162 - Please enter 4 CVC digits for American Express card",
+                        "Invalid transaction.":
+                          "171 - Please enter correct billing information",
+                        "Security Violation":
+                          "185 - The payment was rejected due to security concerns",
+                        "\u0645\u0637\u0644\u0648\u0628 CVC \u0644\u0644\u0628\u0637\u0627\u0642\u0629.":
+                          "203 - Please enter correct CVC number",
+                        "Gateway Rejected: risk_threshold":
+                          "206 - The payment authorization has failed, please try again",
+                        "\u0e40\u0e14\u0e37\u0e2d\u0e19\u0e17\u0e35\u0e48\u0e1a\u0e31\u0e15\u0e23\u0e2b\u0e21\u0e14\u0e2d\u0e32\u0e22\u0e38\u0e44\u0e21\u0e48\u0e16\u0e39\u0e01\u0e15\u0e49\u0e2d\u0e07":
+                          "210 - Please enter correct card expiry month",
+                        "CVC c\u1ee7a th\u1ebb l\u00e0 b\u1eaft bu\u1ed9c.":
+                          "212 - Please enter correct CVC number",
+                        "Th\u00e1ng h\u1ebft h\u1ea1n th\u1ebb kh\u00f4ng h\u1ee3p l\u1ec7.":
+                          "213 - Please enter correct card expiry month",
+                        "User limit exceeded":
+                          "215 - Transaction limit reached, please contact us",
+                        "CVC kart\u0131 gereklidir.":
+                          "217 - Please enter correct CVC number",
+                        "Card Issuer Declined CVV":
+                          "222 - Please enter correct CVV number",
+                        "B\u016btina kortel\u0117s CVC.":
+                          "238 - Please enter correct CVC number",
+                        "Issuer or Cardholder has put a restriction on the card":
+                          "240 - The transaction was declined. Please contact your bank.",
+                        "O m\u00eas de validade do cart\u00e3o era inv\u00e1lido":
+                          "244 - Please enter correct card expiry month",
+                        "Your card number is incorrect.":
+                          "245 - Please enter correct card number",
+                        "\u0e15\u0e49\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e01\u0e32\u0e23\u0e4c\u0e14 CVC":
+                          "250 - Please enter correct CVC number",
+                        "Je vy\u017eadov\u00e1no CVC karty.":
+                          "252 - Please enter correct CVC number",
+                        "M\u011bs\u00edc vypr\u0161en\u00ed platnosti karty je neplatn\u00fd.":
+                          "253 - Please enter correct card expiry month",
+                        "Kod CVC karty jest wymagany.":
+                          "266 - Please enter correct CVC number",
+                        "Miesi\u0105c wa\u017cno\u015bci karty jest nieprawid\u0142owy.":
+                          "267 - Please enter correct card expiry month",
+                        "Gateway Reject - IP address Blacklist":
+                          "268 - The payment was rejected due to security concerns. Please contact us.",
+                        "Gateway Reject - Global Checkout Blacklist":
+                          "280 - The payment was rejected due to security concerns",
+                        "Kad CVC diperlukan.":
+                          "285 - Please enter correct CVC number",
+                        "Document ID is required.":
+                          "289 - Please enter your Document ID",
+                        "CVC \u043a\u0430\u0440\u0442\u044b \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f.":
+                          "344 - Please enter correct CVC number",
+                        "\u041c\u0456\u0441\u044f\u0446\u044c \u0437\u0430\u043a\u0456\u043d\u0447\u0435\u043d\u043d\u044f \u0442\u0435\u0440\u043c\u0456\u043d\u0443 \u0434\u0456\u0457 \u043a\u0430\u0440\u0442\u043a\u0438 \u043d\u0435\u0434\u0456\u0439\u0441\u043d\u0438\u0439.":
+                          "347 - Please enter correct card expiry month",
+                        "\u05d7\u05d5\u05d3\u05e9 \u05ea\u05e4\u05d5\u05d2\u05ea \u05d4\u05db\u05e8\u05d8\u05d9\u05e1 \u05d0\u05d9\u05e0\u05d5 \u05d7\u05d5\u05e7\u05d9.":
+                          "360 - Please enter correct card expiry month",
+                        "Transaction Failed due to error in 3D secure process. Originating component acsReferenceNumber, not, recognized.":
+                          "364 - The payment authorization has failed, please try again",
+                        "40181 - Verified Info - Email - Decline and BlackList":
+                          "365 - The payment was rejected due to security concerns. Please contact us.",
+                        "Th\u00e1ng h\u1ebft h\u1ea1n th\u1ebb kh\u00f4ng \u0111\u00fang":
+                          "371 - Please enter correct card expiry month",
+                        "Declined - Call Issuer":
+                          "378 - The transaction was declined please contact your bank",
+                        "Transaction has been declined due to security restriction.":
+                          "392 - The payment authorization has failed, please try again",
+                        "3D-Secure system malfunction":
+                          "402 - The payment authorization has failed, please try again",
+                        "Kart son kullanma tarihi (ay) yanl\u0131\u015f":
+                          "403 - Please enter correct card expiry month",
+                        "\u5361\u7684\u6709\u6548\u6708\u4efd\u65e0\u6548\u3002":
+                          "404 - Please enter correct card expiry month",
+                        "Mesiac expir\u00e1cie karty je neplatn\u00fd.":
+                          "406 - Please enter correct card expiry month",
+                        "Vy\u017eaduje sa karta CVC.":
+                          "407 - Please enter correct CVC number",
+                        "K\u00e1rtya CVC sz\u00fcks\u00e9ges.":
+                          "417 - Please enter correct CVC number",
+                        "\uce74\ub4dc \ub9cc\ub8cc \uc6d4\uc774 \uc798\ubabb\ub418\uc5c8\uc2b5\ub2c8\ub2e4.":
+                          "419 - Please enter correct card expiry month",
+                        "\u05db\u05e8\u05d8\u05d9\u05e1 CVC \u05e0\u05d3\u05e8\u05e9.":
+                          "428 - Please enter correct CVC number",
+                        "Transaction has been declined. A possible duplicate transaction is currently being processed.":
+                          "438 - The transaction was declined. Please contact your bank.",
+                        "Bulan kedaluwarsa kartu tidak valid.":
+                          "445 - Please enter correct card expiry month",
+                        "Potrebna je CVC kartice.":
+                          "448 - Please enter correct CVC number",
+                        "CVC kartu diperlukan.":
+                          "451 - Please enter correct CVC number",
+                        "De kaart-CVC is vereist.":
+                          "463 - Please enter correct CVC number",
+                        "Bulan kedaluwarsa kartu tidak valid":
+                          "464 - Please enter correct card expiry month",
+                        "The transaction was previously 3-D Secure authorized, but the gateway used for this authorization isn't available anymore. Make sure the gateway hasn't been disabled or deleted.":
+                          "479 - The payment authorization has failed, please try again",
+                        "Transaction Failed due to error in 3D secure process.":
+                          "490 - The payment authorization has failed, please try again",
+                        "Il mese di scadenza della carta non \u00e8 valido.":
+                          "502 - Please enter correct card expiry month",
+                        "Cardholder's Activity Limit Exceeded":
+                          "507 - Transaction limit reached, please contact us",
+                        "Address is required.": "Please enter your address.",
+                        "\u0391\u03c0\u03b1\u03b9\u03c4\u03b5\u03af\u03c4\u03b1\u03b9 \u03b7 \u03ba\u03ac\u03c1\u03c4\u03b1 CVC.":
+                          "521 - Please enter correct CVC number",
+                        "Transaction Failed due to error in 3D secure process. Originating component Transient, System, Failure.":
+                          "523 - The payment authorization has failed, please try again",
+                        "\u039f \u03bc\u03ae\u03bd\u03b1\u03c2 \u03bb\u03ae\u03be\u03b7\u03c2 \u03c4\u03b7\u03c2 \u03ba\u03ac\u03c1\u03c4\u03b1\u03c2 \u03b4\u03b5\u03bd \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03b3\u03ba\u03c5\u03c1\u03bf\u03c2.":
+                          "524 - Please enter correct card expiry month",
+                        "Este necesar CVC-ul cardului.":
+                          "530 - Please enter correct CVC number",
+                        "\u041f\u043e\u0442\u0440\u0456\u0431\u043d\u0430 \u043a\u0430\u0440\u0442\u043a\u0430 CVC.":
+                          "535 - Please enter correct CVC number",
+                        "Die Karte CVC ist erforderlich.":
+                          "537 - Please enter correct CVC number",
+                        "Kortet CVC kr\u00e4vs.":
+                          "538 - Please enter correct CVC number",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Card authentication failed.":
+                          "546 - The payment authorization has failed, please contact your bank",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Transaction not permitted to cardholder.":
+                          "550 - The payment authorization has failed, please contact your bank",
+                        "Bulan luput kad tidak sah.":
+                          "565 - Please enter correct card expiry month",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Exceeds ACS maximum challenges.":
+                          "568 - The payment authorization has failed, please contact your bank",
+                        "\u00c8 richiesta la carta CVC.":
+                          "571 - Please enter correct CVC number",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Suspected fraud.":
+                          "573 - The payment authorization has failed, please contact your bank",
+                        "The bank returned the decline code `expired_card`.":
+                          "575 - The card is expired, please use another card",
+                        "\uce74\ub4dc CVC\uac00 \ud544\uc694\ud569\ub2c8\ub2e4.":
+                          "578 - Please enter correct CVC number",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Authentication confidence low.":
+                          "580 - The payment authorization has failed, please contact your bank",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Cardholder not enrolled in service.":
+                          "582 - The payment authorization has failed, please contact your bank",
+                        "Gateway Reject - Invalid Transaction":
+                          "589 - Please enter correct billing information",
+                        "Your card is not supported.":
+                          "593 - Card is not supported, please use a different card",
+                        "\u5361CVC\u662f\u5fc5\u9700\u7684\u3002":
+                          "596 - Please enter correct CVC number",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Security failure.":
+                          "612 - The payment authorization has failed, please contact your bank",
+                        "Please, complete reCAPTCHA challenge correctly":
+                          "619 - Please complete reCAPTCHA challenge and try again",
+                        "failed 3ds2:":
+                          "662 - The payment authorization has failed, please try again",
+                        "The transaction has been denied by the Gateway. 3D secure Authentication failed. Reason: Invalid card number.":
+                          "670 - The payment authorization has failed, please try again",
+                        "State is required.": "Please select your state.",
+                        "City is required.": "Please enter your city.",
+                      };
+                    </script>
+                    <!-- <form
+                        class="form"
+                        id="payment-form"
+                        action="https://cart.hostinger.com/api/v1/direct-payment/submit/processout"
+                      >
+                        <input id="processout_token" name="token" hidden="" />
+                        <input
+                          id="user_payment_gateway_id"
+                          name="user_payment_gateway_id"
+                          value="131"
+                          hidden=""
+                        />
+                        <div>
+                          <label for="card_number">Name on card</label>
+                          <input
+                            type="text"
+                            id="cardholdername"
+                            autocomplete="cc-name"
+                            placeholder="Name on card"
+                          />
+                        </div>
+                        <div>
+                          <label for="card_number">Card number</label>
+                          <div
+                            data-processout-input="cc-number"
+                            autocomplete="cc-number"
+                            data-processout-placeholder="0000 0000 0000 0000"
+                          >
+                            <iframe
+                              class="processout-field-cc-iframe"
+                              name="dwakab"
+                              src="https://js.processout.com/ccfield.html?r=dwakab#dwakab"
+                              style="
+                                background: none;
+                                width: 100%;
+                                display: block;
+                              "
+                              frameborder="0"
+                              allowtransparency="1"
+                              height="18.2px"
+                            ></iframe>
+                          </div>
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <img
+                                src="https://payments.hostinger.com/img/card-logos/default.svg"
+                                class="card-logo"
+                                height="20"
+                              />
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <label for="card_expiration_year">Expiry date</label>
+                          <div
+                            data-processout-input="cc-exp"
+                            autocomplete="cc-exp"
+                            data-processout-placeholder="MM / YY"
+                          >
+                            <iframe
+                              class="processout-field-cc-iframe"
+                              name="rtwub6"
+                              src="https://js.processout.com/ccfield.html?r=rtwub6#rtwub6"
+                              style="
+                                background: none;
+                                width: 100%;
+                                display: block;
+                              "
+                              frameborder="0"
+                              allowtransparency="1"
+                              height="18.2px"
+                            ></iframe>
+                          </div>
+                        </div>
+                        <div>
+                          <label for="card_cvc">CVC code</label>
+                          <div
+                            data-processout-input="cc-cvc"
+                            autocomplete="cc-csc"
+                            data-processout-placeholder="CVC code"
+                          >
+                            <iframe
+                              class="processout-field-cc-iframe"
+                              name="k9bbzf"
+                              src="https://js.processout.com/ccfield.html?r=k9bbzf#k9bbzf"
+                              style="
+                                background: none;
+                                width: 100%;
+                                display: block;
+                              "
+                              frameborder="0"
+                              allowtransparency="1"
+                              height="18.2px"
+                            ></iframe>
+                          </div>
+                        </div>
+
+                        <button type="submit" id="payment-btn" hidden="">
+                          Submit Secure Payment
+                        </button>
+                        <input
+                          id="session_id"
+                          name="session_id"
+                          hidden=""
+                          value="null"
+                        /><input
+                          id="cart_token"
+                          name="cart_token"
+                          hidden=""
+                          value="5db2da52-5135-4c4f-bdaa-54aa75c4c91b"
+                        />
+                      </form> -->
+                    <script>
+                      function makeRequestByMethod(
+                        method,
+                        url,
+                        postData,
+                        callback,
+                        synchronous
+                      ) {
+                        var http = new XMLHttpRequest();
+                        http.onreadystatechange = function () {
+                          if (http.readyState === 4) {
+                            if (http.status < 500) {
+                              var response = JSON.parse(http.responseText);
+
+                              if (http.status !== 200) {
+                                document.dispatchEvent(
+                                  createEvent("payment.failed", {
+                                    message: response.error.message,
+                                  })
+                                );
+                                return;
+                              }
+
+                              return callback(response);
+                            }
+
+                            document.dispatchEvent(
+                              createEvent("payment.failed", {
+                                message: "Oops, unexpected error occurred",
+                              })
+                            );
+                          }
+                        };
+
+                        http.open(method, url, synchronous !== true);
+                        http.setRequestHeader(
+                          "Content-Type",
+                          "application/json;charset=UTF-8"
+                        );
+                        http.setRequestHeader("Accept", "application/json");
+                        http.send(JSON.stringify(postData));
+                      }
+                      function makeRequest(url, postData, callback) {
+                        return makeRequestByMethod(
+                          "POST",
+                          url,
+                          postData,
+                          callback
+                        );
+                      }
+                      function makeGetRequest(
+                        url,
+                        postData,
+                        callback,
+                        synchronous
+                      ) {
+                        return makeRequestByMethod(
+                          "GET",
+                          url,
+                          postData,
+                          callback,
+                          synchronous
+                        );
+                      }
+                      function makeFormRequest(formId, url, callback) {
+                        let inputs = document.querySelectorAll(
+                          "#" + formId + " input, #" + formId + " select"
+                        );
+                        let formData = {};
+                        for (
+                          let inputIterator = 0;
+                          inputIterator < inputs.length;
+                          inputIterator++
+                        ) {
+                          let selectedInput = inputs[inputIterator];
+                          if (selectedInput.name) {
+                            formData[selectedInput.name] =
+                              selectedInput.value;
+                          }
+                        }
+                        if (null === url) {
+                          url = document.getElementById(formId).action;
+                        }
+                        return makeRequestByMethod(
+                          "POST",
+                          url,
+                          formData,
+                          callback
+                        );
+                      }
+                      function createEvent(event, message) {
+                        return new CustomEvent(event, {
+                          detail: message,
+                        });
+                      }
+                      function setElementHidden(elementId, state) {
+                        let loader = document.getElementById(elementId);
+                        loader.hidden = state;
+                      }
+                      function appendHiddenInput(
+                        appentToId,
+                        inputId,
+                        inputName,
+                        inputValue
+                      ) {
+                        let hiddenInput = document.createElement("input");
+                        hiddenInput.type = "hidden";
+                        hiddenInput.id = inputId;
+                        hiddenInput.name = inputName;
+                        hiddenInput.value = inputValue;
+                        document
+                          .getElementById(appentToId)
+                          .appendChild(hiddenInput);
+                      }
+                      function getQueryVar(variable) {
+                        let query = window.location.search.substring(1);
+                        let vars = query.split("&");
+                        for (let i = 0; i < vars.length; i++) {
+                          let pair = vars[i].split("=");
+                          if (pair[0] === variable) {
+                            return pair[1];
+                          }
+                        }
+                        return false;
+                      }
+                      function getQueryVars(vars) {
+                        let qry = "";
+                        for (let i = 0; i < vars.length; i++) {
+                          let qryVal = getQueryVar(vars[i]);
+                          if (false !== qryVal) {
+                            qry +=
+                              (qry === "" ? "" : "&") +
+                              vars[i] +
+                              "=" +
+                              qryVal;
+                          }
+                        }
+
+                        return qry;
+                      }
+                      function getQueryToAppend() {
+                        let qry = getQueryVars([
+                          "currency",
+                          "country",
+                          "amount",
+                        ]);
+                        if (qry) {
+                          qry = "?" + qry;
+                        }
+
+                        return qry;
+                      }
+                      function docReady(fn) {
+                        if (
+                          document.readyState === "complete" ||
+                          document.readyState === "interactive"
+                        ) {
+                          setTimeout(fn, 1);
+                        } else {
+                          document.addEventListener("DOMContentLoaded", fn);
+                        }
+                      }
+                    </script>
+                    <script>
+                      var error = document.getElementById("errors");
+                      var success = document.getElementById("success");
+                      var processoutPublicKey =
+                        "proj_KjM2GnoleisdUgtyPMjcDudeis1TBSDP";
+                      var errorCodes = {
+                        "processout.payment.declined":
+                          "The payment was declined.",
+                        "processout.gateway.declined":
+                          "The gateway that attempted to process the payment returned a generic decline. This can be caused by validation errors, fraud prevention tool or other specific errors.",
+                        "processout.card.needs-authentication":
+                          "The card requires a 3DS authentication to be performed, for example in the scope of 3DS2\\\/SCA",
+                        "processout.card.declined":
+                          "The card payment was declined.",
+                        "processout.card.do-not-honor":
+                          "Bank returned error without any additional information (DO-NOT-HONOR)",
+                        "processout.card.no-action-taken":
+                          "No action was done by the payment provider, and should be retried",
+                        "processout.card.please-retry":
+                          "The payment should be retried",
+                        "processout.card.security-violation":
+                          "The transaction represented a security threat during its processing and was declined",
+                        "processout.card.acquirer-failed":
+                          "The acquirer used by the payment processor failed to process the transaction",
+                        "processout.card.issuer-failed":
+                          "The card holder bank failed to process the transaction",
+                        "processout.card.processing-error":
+                          "The processing failed at the acquirer or card holder bank level",
+                        "processout.card.issuer-down":
+                          "The card holder bank could not process the payment",
+                        "processout.card.maximum-attempts":
+                          "The card maximum payment attempts were reached - contact the bank",
+                        "processout.card.contact-bank":
+                          "Card holder bank declined the payment - contact the bank",
+                        "processout.card.exceeded-limits":
+                          "The card limits were reached - contact the bank",
+                        "processout.card.exceeded-withdrawal-limit":
+                          "The card withdrawal limit was reached - contact the bank",
+                        "processout.card.exceeded-activity-limits":
+                          "The card activity limit was reached - contact the bank",
+                        "processout.card.no-money":
+                          "The card has no money left in its bank account, add more funds before retrying",
+                        "processout.card.possible-fraud":
+                          "The payment was blocked for potential fraud",
+                        "processout.card.duplicate":
+                          "The transaction had high chances of being a duplicate, and was declined",
+                        "processout.card.issuer-not-found":
+                          "The payment provider could not find the card issuer bank",
+                        "processout.card.network-failed":
+                          "The payment provider failed to contact the card network to process the transaction",
+                        "processout.card.not-supported":
+                          "The card is not supported by the payment provider",
+                        "processout.card.currency-unsupported":
+                          "The currency is not supported by this card",
+                        "processout.card.type-not-supported":
+                          "The card type was not supported by the payment provider",
+                        "processout.card.not-activated":
+                          "The card was not activated yet by the card holder or its bank",
+                        "processout.card.expired": "The card was expired",
+                        "processout.card.invalid":
+                          "The card was invalid (invalid number, expiration date or CVC)",
+                        "processout.card.invalid-number":
+                          "The card has an invalid number",
+                        "processout.card.invalid-pin":
+                          "The card PIN was invalid. This error code does not apply for online payments",
+                        "processout.card.invalid-name":
+                          "The name on the card was invalid (potential AVS failure)",
+                        "processout.card.invalid-expiry-date":
+                          "The card expiration date was invalid",
+                        "processout.card.invalid-expiry-month":
+                          "The card expiration month was invalid",
+                        "processout.card.invalid-expiry-year":
+                          "The card expiration year was invalid",
+                        "processout.card.invalid-zip":
+                          "The card holder ZIP code was invalid (potential AVS failure)",
+                        "processout.card.invalid-address":
+                          "The card holder address was invalid (potential AVS failure)",
+                        "processout.card.missing-cvc":
+                          "The card CVC was missing, but needed to process the payment",
+                        "processout.card.missing-expiry":
+                          "The card expiry date was missing, but needed to process the payment",
+                        "processout.card.missing-number":
+                          "The card number was missing",
+                        "processout.card.missing-3ds":
+                          "The card 3DS verification process was missing but needed to process the payment",
+                        "processout.card.failed-cvc":
+                          "The card CVC check failed",
+                        "processout.card.failed-avs":
+                          "The card AVS check failed",
+                        "processout.card.failed-avs-postal":
+                          "The card AVS check failed on the postal code",
+                        "processout.card.unsupported-3ds":
+                          "The card does not support 3DS authentication (but a 3DS authentication was requested)",
+                        "processout.card.failed-3ds":
+                          "The card 3DS check failed",
+                        "processout.card.expired-3ds":
+                          "The card 3DS check expired and needs to be retried",
+                        "processout.card.failed-avs-address":
+                          "The card AVS check failed on the address",
+                        "processout.card.failed-cvc-and-avs":
+                          "Both the card CVC and AVS checks failed",
+                        "processout.card.bad-track-data":
+                          "The track data of the card was invalid (expiration date or CVC)",
+                        "processout.card.not-authorized":
+                          "The card is not authorized to make the payment",
+                        "processout.card.not-registered":
+                          "The card was not yet registered and can therefore not process payments",
+                        "processout.card.stolen": "The card was stolen",
+                        "processout.card.lost":
+                          "The card was lost by its card holder",
+                        "processout.card.dont-retry":
+                          "The payment should not be retried",
+                        "processout.card.invalid-account":
+                          "The card bank account was invalid, the customer should contact its bank",
+                        "processout.card.revoked": "The card was revoked",
+                        "processout.card.revoked-all":
+                          "All the card holder cards were revoked",
+                        "processout.card.test":
+                          "The card was a test card and can not be used to process live transactions",
+                        "processout.card.blacklisted":
+                          "The card was blacklisted from the payment provider",
+                      };
+
+                      function togglePaymentButton(disable) {
+                        var paymentButton =
+                          document.getElementById("payment-btn");
+                        if (disable) {
+                          paymentButton.disabled = disable;
+                          return;
+                        }
+
+                        if (
+                          paymentButton &&
+                          paymentButton.hasAttribute("disabled")
+                        ) {
+                          paymentButton.removeAttribute("disabled");
+                        }
+                      }
+
+                      function buildProcessoutClient() {
+                        return new ProcessOut.ProcessOut(processoutPublicKey);
+                      }
+
+                      function detectCard(e) {
+                        let cardLogoMap = {
+                          visa: "visa",
+                          mastercard: "mastercard",
+                          "american-express": "amex",
+                          "union-pay": "unionpay",
+                          "diners-club": "diners",
+                          discover: "discover",
+                          jcb: "jcb",
+                          maestro: "maestro",
+                          hipercard: "hipercard",
+                          elo: "elo",
+                        };
+                        let cardLogo =
+                          "https://payments.hostinger.com/img/card-logos/default.svg";
+                        if (
+                          e.schemes.length === 1 &&
+                          cardLogoMap.hasOwnProperty(e.schemes[0])
+                        ) {
+                          cardLogo =
+                            "https://payments.hostinger.com/img/card-logos/" +
+                            cardLogoMap[e.schemes[0]] +
+                            ".svg";
+                        }
+                        document.querySelector(".card-logo").src = cardLogo;
+                      }
+
+                      window.updatePaymentAmount = function (price) {
+                        let installments =
+                          document.querySelector("#installments");
+                        let addMore =
+                          installments.getAttribute("data-add-more-msg");
+                        let currencyPrecision = parseInt(
+                          installments.getAttribute("data-currency-precision")
+                        );
+                        let currencySymbol = installments.getAttribute(
+                          "data-currency-symbol"
+                        );
+                        let ratesMessage = installments.getAttribute(
+                          "data-interest-rates-msg"
+                        );
+                        let installmentOptions = document.querySelectorAll(
+                          "#installments option"
+                        );
+                        for (
+                          let i = 0, len = installmentOptions.length;
+                          i < len;
+                          i++
+                        ) {
+                          let installmentOption = installmentOptions[i];
+                          let minAmount =
+                            installmentOption.getAttribute(
+                              "data-min-amount"
+                            ) /
+                            10 ** currencyPrecision;
+                          let monthCount =
+                            installmentOption.getAttribute("data-month");
+                          let monthTranslated = installments.getAttribute(
+                            "data-str-month" + (monthCount > 1 ? "s" : "")
+                          );
+                          let rate =
+                            installmentOption.getAttribute("data-rate");
+                          let monthString =
+                            monthCount + " " + monthTranslated;
+                          let priceString = "";
+                          if (isNaN(rate) || rate == 0.0) {
+                            priceString = ratesMessage;
+                          } else {
+                            let total = price * rate;
+                            let totalStr =
+                              currencySymbol +
+                              total.toFixed(currencyPrecision);
+                            let subTotalStr =
+                              currencySymbol +
+                              (total / monthCount).toFixed(currencyPrecision);
+                            priceString = subTotalStr + " (" + totalStr + ")";
+                          }
+                          let itemString = monthString + " " + priceString;
+                          if (price >= minAmount) {
+                            if (installmentOption.hasAttribute("disabled")) {
+                              installmentOption.removeAttribute("disabled");
+                            }
+                          } else {
+                            if (!installmentOption.hasAttribute("disabled")) {
+                              installmentOption.setAttribute(
+                                "disabled",
+                                "disabled"
+                              );
+                            }
+                            let replacement =
+                              currencySymbol +
+                              (minAmount - price).toFixed(currencyPrecision);
+                            itemString +=
+                              " " +
+                              addMore.replace(":placeHolder", replacement);
+                          }
+                          installmentOption.selected = false;
+                          installmentOption.innerText = itemString;
+                        }
+                      };
+
+                      document.addEventListener(
+                        "DOMContentLoaded",
+                        function () {
+                          var processout = buildProcessoutClient();
+                          processout.setupForm(
+                            document.getElementById("payment-form"),
+                            {
+                              requireCVC: true,
+                              style: {
+                                fontSize: "16px",
+                                "::placeholder": {
+                                  color: "#727586",
+                                },
+                              },
+                            },
+                            function (form) {
+                              initializeForm(form);
+                            },
+                            function (error) {
+                              document.dispatchEvent(
+                                createEvent("payment.failed-initializing", {
+                                  message: "failed-initializing",
+                                })
+                              );
+                            }
+                          );
+
+                          function initializeForm(form) {
+                            form.addEventListener("submit", function (event) {
+                              handleFormSubmit(event, form);
+                            });
+                            let numberField = form.getNumberField();
+                            numberField.on("keyup", detectCard);
+                            numberField.on("change", detectCard);
+                          }
+
+                          function doFormSubmit(form) {
+                            if (typeof window.forterToken === "string") {
+                              appendHiddenInput(
+                                "payment-form",
+                                "forter_token",
+                                "forter_token",
+                                window.forterToken
+                              );
+                            }
+
+                            document.dispatchEvent(
+                              createEvent("payment.establishing", {
+                                message: "establishing",
+                              })
+                            );
+                            togglePaymentButton(true);
+                            processout.tokenize(
+                              form,
+                              {
+                                name: document.getElementById(
+                                  "cardholdername"
+                                ).value,
+                              },
+                              function (cardToken) {
+                                document.getElementById(
+                                  "processout_token"
+                                ).value = cardToken;
+                                document.dispatchEvent(
+                                  createEvent("payment.card-tokenized", {
+                                    cardToken: cardToken,
+                                    callback: function (
+                                      invoiceId,
+                                      customerId
+                                    ) {
+                                      handle3ds(invoiceId, customerId);
+                                    },
+                                  })
+                                );
+                              },
+                              function (error) {
+                                let errorMessages = {
+                                  "The card number is invalid.":
+                                    "The card number is invalid.",
+                                  "The card CVC is required.":
+                                    "The card CVC is required.",
+                                  "The card expiry month is invalid.":
+                                    "The card expiry month is invalid.",
+                                };
+                                let message = error.message;
+                                if (errorMessages.hasOwnProperty(message)) {
+                                  message = errorMessages[message];
+                                } else if (
+                                  errorCodes.hasOwnProperty(
+                                    "processout." + error.code
+                                  )
+                                ) {
+                                  message =
+                                    errorCodes["processout." + error.code];
+                                }
+                                document.dispatchEvent(
+                                  createEvent("payment.invalid-details", {
+                                    message: message,
+                                    code: error.code,
+                                  })
+                                );
+                                togglePaymentButton(false);
+                              }
+                            );
+                          }
+
+                          function handleFormSubmit(event, form) {
+                            event.preventDefault();
+                            getRiskSessionId()
+                              .then((riskJsToken) => {
+                                appendHiddenInput(
+                                  "payment-form",
+                                  "riskjs_token",
+                                  "riskjs_token",
+                                  riskJsToken
+                                );
+                              })
+                              .catch((error) => {
+                                console.log(error);
+                                document.dispatchEvent(
+                                  createEvent("payment.failed", {
+                                    message: error,
+                                    code: error.code,
+                                  })
+                                );
+                              })
+                              .finally(() => {
+                                doFormSubmit(form);
+
+                                return false;
+                              });
+                          }
+
+                          function handle3ds(invoiceId, customerId) {
+                            processout.makeCardPayment(
+                              invoiceId,
+                              customerId,
+                              {},
+                              function () {
+                                appendHiddenInput(
+                                  "payment-form",
+                                  "invoice_id",
+                                  "invoice_id",
+                                  invoiceId
+                                );
+                                appendHiddenInput(
+                                  "payment-form",
+                                  "customer_id",
+                                  "customer_id",
+                                  customerId
+                                );
+                                makeFormRequest(
+                                  "payment-form",
+                                  null,
+                                  function (response) {
+                                    document.dispatchEvent(
+                                      createEvent("payment.completed", {
+                                        message: "Success",
+                                        response: response,
+                                      })
+                                    );
+                                  }
+                                );
+                              },
+                              function (error) {
+                                let errorMessages = {
+                                  "The card number is invalid.":
+                                    "The card number is invalid.",
+                                  "The card CVC is required.":
+                                    "The card CVC is required",
+                                  "The card expiry month is invalid.":
+                                    "The card expiry month is invalid.",
+                                };
+                                let message = error.message;
+                                if (
+                                  window.loadedCorrections.hasOwnProperty(
+                                    message
+                                  )
+                                ) {
+                                  message = window.loadedCorrections[message];
+                                } else if (
+                                  errorMessages.hasOwnProperty(message)
+                                ) {
+                                  message = errorMessages[message];
+                                } else if (
+                                  errorCodes.hasOwnProperty(
+                                    "processout." + error.code
+                                  )
+                                ) {
+                                  message =
+                                    errorCodes["processout." + error.code];
+                                }
+
+                                document.dispatchEvent(
+                                  createEvent("payment.failed", {
+                                    message: message,
+                                    code: error.code,
+                                  })
+                                );
+                                togglePaymentButton(false);
+                              }
+                            );
+                          }
+                        }
+                      );
+                    </script>
+                    <script>
+                      document.addEventListener(
+                        "ftr:tokenReady",
+                        function (evt) {
+                          window.forterToken = evt.detail;
+                        }
+                      );
+                    </script>
+                    <script type="text/javascript" id="5e3d9c9d1fe4">
+                      (function () {
+                        var merchantConfig = {
+                          csp: false,
+                        };
+
+                        var siteId = "5e3d9c9d1fe4";
+                        function t(t, n) {
+                          for (var e = t.split(""), r = 0; r < e.length; ++r)
+                            e[r] = String.fromCharCode(
+                              e[r].charCodeAt(0) + n
+                            );
+                          return e.join("");
+                        }
+                        function n(n) {
+                          return t(n, -S).replace(/%SN%/g, siteId);
+                        }
+                        function e() {
+                          var t = "no" + "op" + "fn",
+                            n = "g" + "a",
+                            e = "n" + "ame";
+                          return window[n] && window[n][e] === t;
+                        }
+                        function r() {
+                          return !(
+                            !navigator.brave ||
+                            "function" != typeof navigator.brave.isBrave
+                          );
+                        }
+                        function o() {
+                          return (
+                            document.currentScript &&
+                            document.currentScript.src
+                          );
+                        }
+                        function i(t) {
+                          try {
+                            (B.ex = t),
+                              e() &&
+                              -1 === B.ex.indexOf(R.uB) &&
+                              (B.ex += R.uB),
+                              r() &&
+                              -1 === B.ex.indexOf(R.uBr) &&
+                              (B.ex += R.uBr),
+                              o() &&
+                              -1 === B.ex.indexOf(R.nIL) &&
+                              (B.ex += R.nIL),
+                              window.ftr__snp_cwc || (B.ex += R.s),
+                              F(B);
+                          } catch (t) { }
+                        }
+                        function c(t, n) {
+                          function e(o) {
+                            try {
+                              o.blockedURI === t &&
+                                (n(), document.removeEventListener(r, e));
+                            } catch (t) {
+                              document.removeEventListener(r, e);
+                            }
+                          }
+                          var r = "securitypolicyviolation";
+                          document.addEventListener(r, e),
+                            setTimeout(function () {
+                              document.removeEventListener(r, e);
+                            }, 2 * 60 * 1e3);
+                        }
+                        function a(t, n, e, r) {
+                          var o = !1;
+                          (t = "https://" + t),
+                            c(t, function () {
+                              r(!0), (o = !0);
+                            });
+                          var i = document.createElement("script");
+                          (i.onerror = function () {
+                            if (!o)
+                              try {
+                                r(!1), (o = !0);
+                              } catch (t) { }
+                          }),
+                            (i.onload = e),
+                            (i.type = "text/javascript"),
+                            (i.id = "ftr__script"),
+                            (i.async = !0),
+                            (i.src = t);
+                          var a = document.getElementsByTagName("script")[0];
+                          a.parentNode.insertBefore(i, a);
+                        }
+                        function u(t, n, e, r) {
+                          var o = !1,
+                            i = new XMLHttpRequest();
+                          if (
+                            (c("https:" + t, function () {
+                              e(new Error("CSP Violation"), !0), (o = !0);
+                            }),
+                              "withCredentials" in i)
+                          )
+                            i.open("GET", t, !0);
+                          else {
+                            if ("undefined" == typeof XDomainRequest) return;
+                            (i = new XDomainRequest()), i.open("GET", t);
+                          }
+                          Object.keys(r).forEach(function (t) {
+                            i.setRequestHeader(t, r[t]);
+                          }),
+                            (i.onload = function () {
+                              "function" == typeof n && n(i);
+                            }),
+                            (i.onerror = function (t) {
+                              if ("function" == typeof e && !o)
+                                try {
+                                  e(t, !1), (o = !0);
+                                } catch (t) { }
+                            }),
+                            (i.onprogress = function () { }),
+                            (i.ontimeout = function () {
+                              "function" == typeof e &&
+                                e("tim" + "eo" + "ut", !1);
+                            }),
+                            setTimeout(function () {
+                              i.send();
+                            }, 0);
+                        }
+                        function d(t, siteId, n) {
+                          function e(t) {
+                            var n = t.toString(16);
+                            return n.length % 2 ? "0" + n : n;
+                          }
+                          function r(t) {
+                            if (t <= 0) return "";
+                            for (
+                              var n = "0123456789abcdef", e = "", r = 0;
+                              r < t;
+                              r++
+                            )
+                              e += n[Math.floor(Math.random() * n.length)];
+                            return e;
+                          }
+                          function o(t) {
+                            for (var n = "", r = 0; r < t.length; r++)
+                              n += e(t.charCodeAt(r));
+                            return n;
+                          }
+                          function i(t) {
+                            for (
+                              var n = t.split(""), e = 0;
+                              e < n.length;
+                              ++e
+                            )
+                              n[e] = String.fromCharCode(
+                                255 ^ n[e].charCodeAt(0)
+                              );
+                            return n.join("");
+                          }
+                          n = n ? "1" : "0";
+                          var c = [];
+                          return (
+                            c.push(t),
+                            c.push(siteId),
+                            c.push(n),
+                            (function (t) {
+                              var n = 40,
+                                e = "";
+                              return (
+                                t.length < n / 2 &&
+                                (e = "," + r(n / 2 - t.length - 1)),
+                                o(i(t + e))
+                              );
+                            })(c.join(","))
+                          );
+                        }
+                        function f() {
+                          function t() {
+                            C && (Q(R.dUAL), setTimeout(s, E, R.dUAL));
+                          }
+                          function n(t, n) {
+                            i(n ? R.uAS + R.uF + R.cP : R.uAS + R.uF);
+                          }
+                          window.ftr__fdad(t, n);
+                        }
+                        function s(t) {
+                          try {
+                            var n = t === R.uDF ? q : C;
+                            if (!n) return;
+                            a(
+                              n,
+                              void 0,
+                              function () {
+                                try {
+                                  X(), i(t + R.uS);
+                                } catch (t) { }
+                              },
+                              function (n) {
+                                try {
+                                  X(),
+                                    (B.td = 1 * new Date() - B.ts),
+                                    i(n ? t + R.uF + R.cP : t + R.uF),
+                                    t === R.uDF && f();
+                                } catch (t) {
+                                  i(R.eUoe);
+                                }
+                              }
+                            );
+                          } catch (n) {
+                            i(t + R.eTlu);
+                          }
+                        }
+                        var h = "22g6otrwjeq6qsu1forxgiurqw1qhw2vwdwxv",
+                          v = "fort",
+                          w = "erTo",
+                          l = "ken";
+                        window.ftr__config = {
+                          m: merchantConfig,
+                          s: "15",
+                          si: siteId,
+                        };
+                        var m = !1,
+                          p = v + w + l,
+                          g = 10,
+                          _ = {
+                            write: function (t, n, e, r) {
+                              void 0 === r && (r = !0);
+                              var o, i;
+                              if (
+                                (e
+                                  ? ((o = new Date()),
+                                    o.setTime(
+                                      o.getTime() + 24 * e * 60 * 60 * 1e3
+                                    ),
+                                    (i = "; expires=" + o.toGMTString()))
+                                  : (i = ""),
+                                  !r)
+                              )
+                                return void (document.cookie =
+                                  escape(t) +
+                                  "=" +
+                                  escape(n) +
+                                  i +
+                                  "; path=/");
+                              for (
+                                var c = 1,
+                                a = document.domain.split("."),
+                                u = g,
+                                d = !0;
+                                d && a.length >= c && u > 0;
+
+                              ) {
+                                var f = a.slice(-c).join(".");
+                                document.cookie =
+                                  escape(t) +
+                                  "=" +
+                                  escape(n) +
+                                  i +
+                                  "; path=/; domain=" +
+                                  f;
+                                var s = _.read(t);
+                                (null != s && s == n) ||
+                                  ((f = "." + f),
+                                    (document.cookie =
+                                      escape(t) +
+                                      "=" +
+                                      escape(n) +
+                                      i +
+                                      "; path=/; domain=" +
+                                      f)),
+                                  (d =
+                                    -1 ===
+                                    document.cookie.indexOf(t + "=" + n)),
+                                  c++,
+                                  u--;
+                              }
+                            },
+                            read: function (t) {
+                              var n = null;
+                              try {
+                                for (
+                                  var e = escape(t) + "=",
+                                  r = document.cookie.split(";"),
+                                  o = 32,
+                                  i = 0;
+                                  i < r.length;
+                                  i++
+                                ) {
+                                  for (var c = r[i]; c.charCodeAt(0) === o;)
+                                    c = c.substring(1, c.length);
+                                  0 === c.indexOf(e) &&
+                                    (n = unescape(
+                                      c.substring(e.length, c.length)
+                                    ));
+                                }
+                              } finally {
+                                return n;
+                              }
+                            },
+                          },
+                          y = window.ftr__config.s;
+                        y += "ck";
+                        var T = function (t) {
+                          if (document.head) {
+                            var n = (function () {
+                              var n = document.createElement("link");
+                              return (
+                                n.setAttribute(
+                                  "rel",
+                                  "pre" + "con" + "nect"
+                                ),
+                                n.setAttribute(
+                                  "cros" + "sori" + "gin",
+                                  "anonymous"
+                                ),
+                                (n.onload = function () {
+                                  document.head.removeChild(n);
+                                }),
+                                (n.onerror = function (t) {
+                                  document.head.removeChild(n);
+                                }),
+                                n.setAttribute("href", t),
+                                document.head.appendChild(n),
+                                n
+                              );
+                            })();
+                            setTimeout(function () {
+                              document.head.removeChild(n);
+                            }, 3e3);
+                          }
+                        },
+                          S = 3,
+                          x = n(h || "22g6otrwjeq6qsu1forxgiurqw1qhw2vwdwxv"),
+                          A = t("[0Uhtxhvw0LG", -S),
+                          L = t("[0Fruuhodwlrq0LG", -S),
+                          k = t("Li0Qrqh0Pdwfk", -S),
+                          C,
+                          U = "fgq71iruwhu1frp",
+                          q = n("(VQ(1" + U + "2vq2(VQ(2vfulsw1mv"),
+                          D = n("(VQ(1" + U + "2vqV2(VQ(2vfulsw1mv"),
+                          E = 10;
+                        window.ftr__startScriptLoad = 1 * new Date();
+                        var b = function (t) {
+                          var n = "ft" + "r:tok" + "enR" + "eady";
+                          window.ftr__tt && clearTimeout(window.ftr__tt),
+                            (window.ftr__tt = setTimeout(function () {
+                              try {
+                                delete window.ftr__tt, (t += "_tt");
+                                var e = document.createEvent("Event");
+                                e.initEvent(n, !1, !1),
+                                  (e.detail = t),
+                                  document.dispatchEvent(e);
+                              } catch (t) { }
+                            }, 1e3));
+                        },
+                          F = function (t) {
+                            var n = function (t) {
+                              return t || "";
+                            },
+                              e =
+                                n(t.id) +
+                                "_" +
+                                n(t.ts) +
+                                "_" +
+                                n(t.td) +
+                                "_" +
+                                n(t.ex) +
+                                "_" +
+                                n(y);
+                            _.write(p, e, 400, !0),
+                              b(e),
+                              (window.ftr__gt = e);
+                          },
+                          I = function () {
+                            var t = _.read(p) || "",
+                              n = t.split("_"),
+                              e = function (t) {
+                                return n[t] || void 0;
+                              };
+                            return {
+                              id: e(0),
+                              ts: e(1),
+                              td: e(2),
+                              ex: e(3),
+                              vr: e(4),
+                            };
+                          },
+                          V = (function () {
+                            for (
+                              var t = {}, n = "fgu", e = [], r = 0;
+                              r < 256;
+                              r++
+                            )
+                              e[r] = (r < 16 ? "0" : "") + r.toString(16);
+                            var o = function (t, n, r, o, i) {
+                              var c = i ? "-" : "";
+                              return (
+                                e[255 & t] +
+                                e[(t >> 8) & 255] +
+                                e[(t >> 16) & 255] +
+                                e[(t >> 24) & 255] +
+                                c +
+                                e[255 & n] +
+                                e[(n >> 8) & 255] +
+                                c +
+                                e[((n >> 16) & 15) | 64] +
+                                e[(n >> 24) & 255] +
+                                c +
+                                e[(63 & r) | 128] +
+                                e[(r >> 8) & 255] +
+                                c +
+                                e[(r >> 16) & 255] +
+                                e[(r >> 24) & 255] +
+                                e[255 & o] +
+                                e[(o >> 8) & 255] +
+                                e[(o >> 16) & 255] +
+                                e[(o >> 24) & 255]
+                              );
+                            },
+                              i = function () {
+                                if (
+                                  window.Uint32Array &&
+                                  window.crypto &&
+                                  window.crypto.getRandomValues
+                                ) {
+                                  var t = new window.Uint32Array(4);
+                                  return (
+                                    window.crypto.getRandomValues(t),
+                                    { d0: t[0], d1: t[1], d2: t[2], d3: t[3] }
+                                  );
+                                }
+                                return {
+                                  d0: (4294967296 * Math.random()) >>> 0,
+                                  d1: (4294967296 * Math.random()) >>> 0,
+                                  d2: (4294967296 * Math.random()) >>> 0,
+                                  d3: (4294967296 * Math.random()) >>> 0,
+                                };
+                              },
+                              c = function () {
+                                var t = "",
+                                  n = function (t, n) {
+                                    for (var e = "", r = t; r > 0; --r)
+                                      e += n.charAt(
+                                        (1e3 * Math.random()) % n.length
+                                      );
+                                    return e;
+                                  };
+                                return (
+                                  (t += n(2, "0123456789")),
+                                  (t += n(1, "123456789")),
+                                  (t += n(8, "0123456789"))
+                                );
+                              };
+                            return (
+                              (t.safeGenerateNoDash = function () {
+                                try {
+                                  var t = i();
+                                  return o(t.d0, t.d1, t.d2, t.d3, !1);
+                                } catch (t) {
+                                  try {
+                                    return n + c();
+                                  } catch (t) { }
+                                }
+                              }),
+                              (t.isValidNumericalToken = function (t) {
+                                return (
+                                  t &&
+                                  t.toString().length <= 11 &&
+                                  t.length >= 9 &&
+                                  parseInt(t, 10).toString().length <= 11 &&
+                                  parseInt(t, 10).toString().length >= 9
+                                );
+                              }),
+                              (t.isValidUUIDToken = function (t) {
+                                return (
+                                  t &&
+                                  32 === t.toString().length &&
+                                  /^[a-z0-9]+$/.test(t)
+                                );
+                              }),
+                              (t.isValidFGUToken = function (t) {
+                                return 0 == t.indexOf(n) && t.length >= 12;
+                              }),
+                              t
+                            );
+                          })(),
+                          R = {
+                            uDF: "UDF",
+                            dUAL: "dUAL",
+                            uAS: "UAS",
+                            mLd: "1",
+                            eTlu: "2",
+                            eUoe: "3",
+                            uS: "4",
+                            uF: "9",
+                            tmos: ["T5", "T10", "T15", "T30", "T60"],
+                            tmosSecs: [5, 10, 15, 30, 60],
+                            bIR: "43",
+                            uB: "u",
+                            uBr: "b",
+                            cP: "c",
+                            nIL: "i",
+                            s: "s",
+                          };
+                        try {
+                          var B = I();
+                          try {
+                            B.id &&
+                              (V.isValidNumericalToken(B.id) ||
+                                V.isValidUUIDToken(B.id) ||
+                                V.isValidFGUToken(B.id))
+                              ? (window.ftr__ncd = !1)
+                              : ((B.id = V.safeGenerateNoDash()),
+                                (window.ftr__ncd = !0)),
+                              (B.ts = window.ftr__startScriptLoad),
+                              F(B),
+                              (window.ftr__snp_cwc = !!_.read(p)),
+                              window.ftr__snp_cwc || (q = D);
+                            for (
+                              var G = "for" + "ter" + ".co" + "m",
+                              M = "ht" + "tps://c" + "dn9." + G,
+                              O =
+                                "ht" +
+                                "tps://" +
+                                B.id +
+                                "-" +
+                                siteId +
+                                ".cd" +
+                                "n." +
+                                G,
+                              j = "http" + "s://cd" + "n3." + G,
+                              N = [M, O, j],
+                              H = 0;
+                              H < N.length;
+                              H++
+                            )
+                              T(N[H]);
+                            var P = new Array(R.tmosSecs.length),
+                              Q = function (t) {
+                                for (var n = 0; n < R.tmosSecs.length; n++)
+                                  P[n] = setTimeout(
+                                    i,
+                                    1e3 * R.tmosSecs[n],
+                                    t + R.tmos[n]
+                                  );
+                              },
+                              X = function () {
+                                for (var t = 0; t < R.tmosSecs.length; t++)
+                                  clearTimeout(P[t]);
+                              };
+                            (window.ftr__fdad = function (n, e) {
+                              if (!m) {
+                                m = !0;
+                                var r = {};
+                                (r[k] = d(
+                                  window.ftr__config.s,
+                                  siteId,
+                                  window.ftr__config.m.csp
+                                )),
+                                  u(
+                                    x,
+                                    function (e) {
+                                      try {
+                                        var r = e
+                                          .getAllResponseHeaders()
+                                          .toLowerCase();
+                                        if (r.indexOf(L.toLowerCase()) >= 0) {
+                                          var o = e.getResponseHeader(L);
+                                          window.ftr__altd2 = t(
+                                            atob(o),
+                                            -S - 1
+                                          );
+                                        }
+                                        if (r.indexOf(A.toLowerCase()) < 0)
+                                          return;
+                                        var i = e.getResponseHeader(A),
+                                          c = t(atob(i), -S - 1);
+                                        if (c) {
+                                          var a = c.split(":");
+                                          if (a && 2 === a.length) {
+                                            for (
+                                              var u = a[0],
+                                              d = a[1],
+                                              f = "",
+                                              s = 0,
+                                              h = 0;
+                                              s < 20;
+                                              ++s
+                                            )
+                                              f +=
+                                                s % 3 > 0 && h < 12
+                                                  ? siteId.charAt(h++)
+                                                  : B.id.charAt(s);
+                                            var v = d.split(",");
+                                            if (v.length > 1) {
+                                              var w = v[0],
+                                                l = v[1];
+                                              C =
+                                                u +
+                                                "/" +
+                                                w +
+                                                "." +
+                                                f +
+                                                "." +
+                                                l;
+                                            }
+                                          }
+                                        }
+                                        n();
+                                      } catch (t) { }
+                                    },
+                                    function (t, n) {
+                                      e && e(t, n);
+                                    },
+                                    r
+                                  );
+                              }
+                            }),
+                              Q(R.uDF),
+                              setTimeout(s, E, R.uDF);
+                          } catch (t) {
+                            i(R.mLd);
+                          }
+                        } catch (t) { }
+                      })();
+                    </script>
+
+                    <script type="text/javascript">
+                      function loadRiskJs(attempt = 1) {
+                        if (attempt <= 5) {
+                          try {
+                            if (typeof window.Risk !== "undefined") {
+                              window.RiskJs = window.Risk.init(
+                                "pk_6b7vb7srqgskhe7dmgqcatupbuk"
+                              );
+                            } else {
+                              let riskJsScript =
+                                document.getElementById("risk-js");
+                              if (riskJsScript) {
+                                riskJsScript.addEventListener("load", () => {
+                                  window.RiskJs = window.Risk.init(
+                                    "pk_6b7vb7srqgskhe7dmgqcatupbuk"
+                                  );
+                                });
+                              } else {
+                                msSleep(100);
+                                loadRiskJs(attempt + 1);
+                              }
+                            }
+                          } catch (Error) {
+                            console.error("Failed to load risk.js", Error);
+                            reportErrMessage(
+                              typeof Error.message !== "undefined"
+                                ? Error.message
+                                : Error
+                            );
+                            msSleep(100);
+                            loadRiskJs(attempt + 1);
+                          }
+                        }
+                      }
+
+                      loadRiskJs();
+
+                      async function msSleep(ms) {
+                        return new Promise((resolve) =>
+                          setTimeout(resolve, ms)
+                        );
+                      }
+
+                      async function getRiskSessionId(attempt = 1) {
+                        if (attempt <= 5 && null !== window.RiskJs) {
+                          try {
+                            return await window.RiskJs.publishRiskData();
+                          } catch (Error) {
+                            console.error(
+                              "Failed to get risk.js SessionID",
+                              Error
+                            );
+                            reportErrMessage(
+                              typeof Error.message !== "undefined"
+                                ? Error.message
+                                : Error
+                            );
+                            await msSleep(200);
+                            return await getRiskSessionId(attempt + 1);
+                          }
+                        }
+                        return await new Promise((resolve) => {
+                          resolve(null);
+                        });
+                      }
+
+                      function reportErrMessage(message) {
+                        console.error("Unexpected error", message);
+                      }
+                    </script>
+                  </div>
+                </div>
+                <div data-v-a3570af3="" class="payment-overview__actions">
+                  <div data-v-a3570af3="" class="h-mt-24 payment-overview__action">
+                    <div data-v-a3570af3="" class="d-flex align-items-center">
+                      <a target="_blank" style="width: 100%; cursor: pointer">
+                        <button data-v-a3570af3="" class="h-button primary" id="proceedButton" onclick="proceedButton()"
+                          type="button">
+                          <span class="h-button__content">Proceed</span>
+                        </button>
+                      </a>
+                    </div>
+                    <div data-v-a3570af3="" class="payment-overview__features">
+                      <div data-v-9f3de439="" data-v-a3570af3="" class="cart-payment-features">
+                        <span data-v-b45ae079="" data-v-9f3de439="" class="h-icon cart-payment-features__icon"><svg
+                            data-v-b45ae079="" xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                            viewBox="0 0 24 24" aria-labelledby="lock" role="presentation" class="h-icon success">
+                            <g data-v-b45ae079="">
+                              <path data-v-b45ae079="" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18 8H17V6C17 3.24 14.76 1 12 1C9.24 1 7 3.24 7 6V8H6C4.9 8 4 8.9 4 10V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V10C20 8.9 19.1 8 18 8ZM12 17C10.9 17 10 16.1 10 15C10 13.9 10.9 13 12 13C13.1 13 14 13.9 14 15C14 16.1 13.1 17 12 17ZM15.1 8H8.9V6C8.9 4.29 10.29 2.9 12 2.9C13.71 2.9 15.1 4.29 15.1 6V8Z">
+                              </path>
+                            </g>
+                          </svg></span><span data-v-9f3de439="" class="cart-payment-features__perk body-1">Encrypted and
+                          Secure Payments</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p data-v-a3570af3="" class="h-mt-24 payment-overview__disclaimer">
+                    By checking out you agree with our
+                    <a href="https://www.hostinger.com/legal/universal-terms-of-service-agreement" target="_blank">Terms
+                      of Service</a>
+                    and confirm that you have read our
+                    <a href="https://www.hostinger.com/legal/privacy-policy" target="_blank">Privacy Policy</a>. You can
+                    cancel recurring payments at any time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script nomodule="">
+    !(function () {
+      var e = document,
+        t = e.createElement("script");
+      if (!("noModule" in t) && "onbeforeload" in t) {
+        var n = !1;
+        e.addEventListener(
+          "beforeload",
+          function (e) {
+            if (e.target === t) n = !0;
+            else if (!e.target.hasAttribute("nomodule") || !n) return;
+            e.preventDefault();
+          },
+          !0
+        ),
+          (t.type = "module"),
+          (t.src = "."),
+          e.head.appendChild(t),
+          t.remove();
+      }
+    })();
+  </script>
+  <script nomodule="" crossorigin="" id="vite-legacy-polyfill"
+    src="https://cart.hostinger.com/assets/polyfills-legacy-2334c208.js"></script>
+  <script nomodule="" crossorigin="" id="vite-legacy-entry"
+    data-src="https://cart.hostinger.com/assets/index-legacy-cd522598.js">
+      System.import(
+        document.getElementById("vite-legacy-entry").getAttribute("data-src")
+      );
+    </script>
+
+  <template id="auto-clicker-autofill-popup">
+    <style>
+      @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css);
+      @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500&subset=latin-ext);
+
+      #body {
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 30px 50px 0 rgb(44 49 59 / 20%);
+        overflow: hidden;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        min-width: 250px;
+        max-width: 400px;
+      }
+
+      .modal-dialog {
+        margin: auto;
+      }
+
+      .modal-content {
+        border: none;
+      }
+
+      /*Header*/
+      .modal-header {
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 0;
+        height: 47px;
+        background: rgba(112.520718, 44.062154, 249.437846, 0.1);
+        color: #fff;
+        border: none;
+      }
+
+      .modal-header button.btn {
+        color: #712cf9;
+        width: 1em;
+        height: 1em;
+        display: flex;
+        box-sizing: content-box;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        --bs-btn-close-opacity: 1;
+        --bs-btn-close-hover-opacity: 0.75;
+        --bs-btn-close-focus-shadow: 0 0 0 0.25em rgba(13, 110, 253, 0.25);
+        opacity: var(--bs-btn-close-opacity);
+      }
+
+      .modal-header button.btn svg {
+        width: inherit;
+        height: inherit;
+      }
+
+      .modal-header button.btn:focus {
+        box-shadow: var(--bs-btn-close-focus-shadow);
+      }
+
+      .modal-header button.btn:hover {
+        opacity: var(--bs-btn-close-hover-opacity);
+      }
+
+      .modal-header button.expand .bi-arrows-expand {
+        display: block !important;
+      }
+
+      .modal-header button.expand .bi-dash-lg {
+        display: none;
+      }
+
+      .modal-header .modal-title {
+        padding-left: 2em;
+        color: #712cf9;
+        position: relative;
+        font-size: 1em;
+      }
+
+      .modal-header .modal-title::before {
+        content: "";
+        position: absolute;
+        left: 0.75em;
+        top: calc(50% - 0.375em);
+        display: block;
+        width: 0.75em;
+        height: 0.75em;
+        border-radius: 50%;
+        background: red;
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.4);
+        animation: pulse 2s infinite;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+        }
+
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+        }
+
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+          box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+        }
+
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+          box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+        }
+
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+          box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+        }
+      }
+
+      /*Body*/
+      .modal-body {
+        max-height: calc(100vh - 7em);
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0.5em 0;
+      }
+
+      td div {
+        vertical-align: middle;
+        width: 180px;
+        line-height: 24px;
+      }
+
+      tr button {
+        visibility: hidden;
+      }
+
+      tr:hover button {
+        visibility: visible;
+      }
+
+      /*Footer*/
+      .modal-footer {
+        padding: 0;
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-tertiary-bg-rgb),
+            var(--bs-bg-opacity)) !important;
+      }
+
+      .modal-footer a {
+        display: flex;
+        align-items: center;
+      }
+
+      .modal-footer a svg {
+        margin-right: 0.15em;
+      }
+
+      .modal-footer a:hover {
+        color: #712cf9 !important;
+      }
+    </style>
+    <div id="body" class="modal position-static d-block" data-bs-theme="light">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h6 class="modal-title text-truncate">Auto Clicker - AutoFill</h6>
+            <div class="d-flex justify-content-center align-items-center">
+              <button type="button" class="btn ms-2" aria-label="collapse">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrows-expand" style="display: none" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8ZM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2ZM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10Z">
+                  </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"></path>
+                </svg>
+              </button>
+              <button type="button" class="btn ms-2" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </header>
+          <main class="modal-body" id="collapse-main">
+            <slot name="actions" hidden="">
+              <table class="table table-sm table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Name/Element</th>
+                    <th scope="col">Value</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider"></tbody>
+              </table>
+            </slot>
+            <slot name="no-actions">
+              <div class="px-2">
+                <div class="card w-100">
+                  <div class="card-body">
+                    <h5 class="card-title mb-3 text-primary">
+                      Start filling form...
+                    </h5>
+                    <hr />
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      If you have already filled form
+                    </h6>
+                    <button type="button" auto-generate-config="" class="btn btn-sm btn-outline-secondary">
+                      Already Filled ?
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </slot>
+          </main>
+          <footer class="modal-footer justify-content-center" id="collapse-footer">
+            <ul class="nav justify-content-between w-100">
+              <li class="nav-item">
+                <a href="https://getautoclicker.com/docs/3.x/getting-started" class="nav-link px-2 text-muted"
+                  target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-file-richtext" viewBox="0 0 16 16">
+                    <path
+                      d="M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z">
+                    </path>
+                    <path
+                      d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z">
+                    </path>
+                  </svg>
+                  Docs
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://discord.gg/ubMBeX3" class="nav-link px-2 text-muted" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chat-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z">
+                    </path>
+                  </svg>
+                  Chat
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://dev.getautoclicker.com/" class="nav-link px-2 text-muted" target="_blank"
+                  id="settings">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z">
+                    </path>
+                  </svg>
+                  Advance
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://github.com/sponsors/Dhruv-Techapps" class="nav-link px-2 text-muted" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-balloon-heart text-danger" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z">
+                    </path>
+                  </svg>
+                  Sponsors
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="auto-clicker-autofill-popup-tr">
+    <tr>
+      <td>
+        <div class="text-truncate"></div>
+      </td>
+      <td>
+        <div class="text-truncate"></div>
+      </td>
+      <td>
+        <button type="button" class="btn-close" data-bs-dismiss="tr" aria-label="Close"></button>
+      </td>
+    </tr>
+  </template><iframe allow="join-ad-interest-group" data-tagging-id="AW-858978838" data-load-time="1703363045152"
+    height="0" width="0" style="display: none; visibility: hidden"
+    src="https://td.doubleclick.net/td/rul/858978838?random=1703363045149&amp;cv=11&amp;fst=1703363045149&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v77887523&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fcart.hostinger.com%2Fpay%2F5db2da52-5135-4c4f-bdaa-54aa75c4c91b&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Cart%20%7C%20Hostinger&amp;auid=1291006765.1703362182&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Not_A%2520Brand%3B8.0.0.0%7CChromium%3B120.0.6099.129%7CGoogle%2520Chrome%3B120.0.6099.129&amp;uamb=0&amp;uap=macOS&amp;uapv=11.5.2&amp;uaw=0"></iframe><iframe
+    allow="join-ad-interest-group" data-tagging-id="AW-743689991" data-load-time="1703363045155" height="0" width="0"
+    style="display: none; visibility: hidden"
+    src="https://td.doubleclick.net/td/rul/743689991?random=1703363045154&amp;cv=11&amp;fst=1703363045154&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v77887523&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fcart.hostinger.com%2Fpay%2F5db2da52-5135-4c4f-bdaa-54aa75c4c91b&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Cart%20%7C%20Hostinger&amp;auid=1291006765.1703362182&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Not_A%2520Brand%3B8.0.0.0%7CChromium%3B120.0.6099.129%7CGoogle%2520Chrome%3B120.0.6099.129&amp;uamb=0&amp;uap=macOS&amp;uapv=11.5.2&amp;uaw=0"></iframe>
+
+  <script type="text/javascript" id="">
+    "undefined" === typeof fbq &&
+      (!(function (b, e, f, g, a, c, d) {
+        b.fbq ||
+          ((a = b.fbq =
+            function () {
+              a.callMethod
+                ? a.callMethod.apply(a, arguments)
+                : a.queue.push(arguments);
+            }),
+            b._fbq || (b._fbq = a),
+            (a.push = a),
+            (a.loaded = !0),
+            (a.version = "2.0"),
+            (a.queue = []),
+            (c = e.createElement(f)),
+            (c.async = !0),
+            (c.src = g),
+            (d = e.getElementsByTagName(f)[0]),
+            d.parentNode.insertBefore(c, d));
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      ),
+        fbq("init", "233182517365050"),
+        fbq("track", "PageView"));
+  </script>
+  <noscript><img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=233182517365050&amp;ev=PageView&amp;noscript=1" /></noscript>
+  <script type="text/javascript" id="">
+    (function (c, d, f, g, e) {
+      c[e] = c[e] || [];
+      var h = function () {
+        var b = { ti: "25052732" };
+        b.q = c[e];
+        c[e] = new UET(b);
+        c[e].push("pageLoad");
+      };
+      var a = d.createElement(f);
+      a.src = g;
+      a.async = 1;
+      a.onload = a.onreadystatechange = function () {
+        var b = this.readyState;
+        (b && "loaded" !== b && "complete" !== b) ||
+          (h(), (a.onload = a.onreadystatechange = null));
+      };
+      d = d.getElementsByTagName(f)[0];
+      d.parentNode.insertBefore(a, d);
+    })(window, document, "script", "//bat.bing.com/bat.js", "uetq");
+  </script>
+  <script type="text/javascript" id="">
+    !(function (d, g, e) {
+      d.TiktokAnalyticsObject = e;
+      var a = (d[e] = d[e] || []);
+      a.methods =
+        "page track identify instances debug on off once ready alias group enableCookie disableCookie".split(
+          " "
+        );
+      a.setAndDefer = function (b, c) {
+        b[c] = function () {
+          b.push([c].concat(Array.prototype.slice.call(arguments, 0)));
+        };
+      };
+      for (d = 0; d < a.methods.length; d++) a.setAndDefer(a, a.methods[d]);
+      a.instance = function (b) {
+        b = a._i[b] || [];
+        for (var c = 0; c < a.methods.length; c++)
+          a.setAndDefer(b, a.methods[c]);
+        return b;
+      };
+      a.load = function (b, c) {
+        var f = "https://analytics.tiktok.com/i18n/pixel/events.js";
+        a._i = a._i || {};
+        a._i[b] = [];
+        a._i[b]._u = f;
+        a._t = a._t || {};
+        a._t[b] = +new Date();
+        a._o = a._o || {};
+        a._o[b] = c || {};
+        c = document.createElement("script");
+        c.type = "text/javascript";
+        c.async = !0;
+        c.src = f + "?sdkid\x3d" + b + "\x26lib\x3d" + e;
+        b = document.getElementsByTagName("script")[0];
+        b.parentNode.insertBefore(c, b);
+      };
+      a.load("CJ67GBJC77U5K7SP5G20");
+      a.page();
+    })(window, document, "ttq");
+  </script>
+  <script src="./script.js"></script>
+
+  <iframe allow="join-ad-interest-group" data-tagging-id="AW-11151584734" data-load-time="1703363045245" height="0"
+    width="0" style="display: none; visibility: hidden"
+    src="https://td.doubleclick.net/td/rul/11151584734?random=1703363045234&amp;cv=11&amp;fst=1703363045234&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je3bt0v871252345z877887523&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fcart.hostinger.com%2Fpay%2F5db2da52-5135-4c4f-bdaa-54aa75c4c91b&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Cart%20%7C%20Hostinger&amp;auid=1291006765.1703362182&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Not_A%2520Brand%3B8.0.0.0%7CChromium%3B120.0.6099.129%7CGoogle%2520Chrome%3B120.0.6099.129&amp;uamb=0&amp;uap=macOS&amp;uapv=11.5.2&amp;uaw=0&amp;data=event%3Dgtag.config"></iframe>
+  <div id="batBeacon583612252672" style="width: 0px; height: 0px; display: none; visibility: hidden">
+    <img id="batBeacon14928469823" width="0" height="0" alt=""
+      src="https://bat.bing.com/action/0?ti=25052732&amp;Ver=2&amp;mid=22596111-6d1f-44d4-aed0-5645140adf18&amp;sid=350017c0a1cf11ee848a79d192c55392&amp;vid=35005300a1cf11ee8e15d797ff8c0850&amp;vids=0&amp;msclkid=N&amp;pi=918639831&amp;lg=en-GB&amp;sw=1920&amp;sh=1080&amp;sc=24&amp;tl=Cart%20%7C%20Hostinger&amp;p=https%3A%2F%2Fcart.hostinger.com%2Fpay%2F5db2da52-5135-4c4f-bdaa-54aa75c4c91b&amp;r=&amp;lt=865&amp;evt=pageLoad&amp;sv=1&amp;rn=291121"
+      style="width: 0px; height: 0px; display: none; visibility: hidden" />
+  </div>
+  <iframe id="_hjSafeContext_8165234" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="
+        display: none !important;
+        width: 1px !important;
+        height: 1px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      "></iframe><iframe name="ftrif" style="display: none"></iframe>
+</body>
+<iframe id="__JSBridgeIframe_1.0__" title="jsbridge___JSBridgeIframe_1.0__" style="display: none"></iframe><iframe
+  id="__JSBridgeIframe_SetResult_1.0__" title="jsbridge___JSBridgeIframe_SetResult_1.0__"
+  style="display: none"></iframe><iframe id="__JSBridgeIframe__" title="jsbridge___JSBridgeIframe__"
+  style="display: none"></iframe><iframe id="__JSBridgeIframe_SetResult__" title="jsbridge___JSBridgeIframe_SetResult__"
+  style="display: none"></iframe>
+
+</html>
