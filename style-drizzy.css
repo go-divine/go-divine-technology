@@ -113,3 +113,15 @@
     line-height: 30px;
   }
 }
+
+
+
+.carousel-caption {
+  position: absolute;
+  color: #000;
+  left: 10%;
+  bottom: 30%;
+  text-align: left;
+  width: fit-content;
+}
+
