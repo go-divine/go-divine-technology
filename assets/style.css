@@ -1945,12 +1945,25 @@ html {
     display: none;
     position: relative;
   }
+
+  .w-nav-button-home  {
+    float: right;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 24px;
+    display: none;
+    position: relative;
+  }
   
-  .w-nav-button:focus {
+  .w-nav-button, .w-nav-button-home :focus {
     outline: 0;
   }
   
-  .w-nav-button.w--open {
+  .w-nav-button, .w-nav-button-home .w--open {
     color: #fff;
     background-color: #c8c8c8;
   }
@@ -1959,7 +1972,7 @@ html {
     display: none;
   }
   
-  .w-nav[data-collapse="all"] .w-nav-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
+  .w-nav[data-collapse="all"] .w-nav-button, .w-nav-button-home , .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
     display: block;
   }
   
@@ -1972,7 +1985,7 @@ html {
       display: none;
     }
   
-    .w-nav[data-collapse="medium"] .w-nav-button {
+    .w-nav[data-collapse="medium"] .w-nav-button, .w-nav-button-home  {
       display: block;
     }
   }
@@ -1982,7 +1995,7 @@ html {
       display: none;
     }
   
-    .w-nav[data-collapse="small"] .w-nav-button {
+    .w-nav[data-collapse="small"] .w-nav-button, .w-nav-button-home  {
       display: block;
     }
   
@@ -1996,7 +2009,7 @@ html {
       display: none;
     }
   
-    .w-nav[data-collapse="tiny"] .w-nav-button {
+    .w-nav[data-collapse="tiny"] .w-nav-button, .w-nav-button-home  {
       display: block;
     }
   }
@@ -3188,7 +3201,7 @@ html {
     border-bottom-right-radius: 20px;
     justify-content: center;
     align-items: center;
-    padding: 80px 80px 90px;
+    /* padding: 80px 80px 90px; */
     display: flex;
     position: static;
   }
@@ -4167,7 +4180,17 @@ html {
     align-self: center;
     display: flex;
   }
-  
+  .sassy-two-nav-button-two-book-now {
+    background-color: #6f56ff;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-family: Averta Bold, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2em;
+    transition: box-shadow .2s;
+  }
+
   .sassy-two-nav-button-two {
     background-color: #ff3f79;
     border-radius: 10px;
@@ -6951,6 +6974,20 @@ html {
     padding-top: 15px;
     padding-bottom: 15px;
     position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+  }
+
+  .sassy-primary-navbar-home {
+    max-width: 1920px;
+    /* background-color: rgba(0, 0, 0, 0); */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: absolute;
     top: 0;
     bottom: auto;
     left: 0%;
@@ -10911,6 +10948,14 @@ html {
       padding: 12px 20px;
       display: none;
     }
+
+    .sassy-service-menu-button-home {
+      color: #fff7f3;
+      margin-right: 20px;
+      background-color: #6f56ff;
+      border-radius: 5px;
+      padding: 5px;
+    }
   
     .sassy-service-menu-button {
       color: #fff7f3;
@@ -13917,10 +13962,6 @@ html {
       padding-top: 20px;
       padding-bottom: 20px;
       font-size: 16px;
-    }
-  
-    .analytic-image-wrapper {
-      padding: 50px 40px;
     }
   
     .tools-user-text {
