@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          transition: opacity ease-in 0.2s;
+        }
+    
+        body[unresolved] {
+          opacity: 0;
+          display: block;
+          overflow: hidden;
+          position: relative;
+        }
+      </style>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta name="robots" content="noindex" />
+      <link href="./style.css" rel="stylesheet">
+      <link href="../assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+      <title>Check Out</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+      <script type="text/javascript" id="ftr__script" async=""
+        src="https://5e3d9c9d1fe4.cdn4.forter.com/sn/5e3d9c9d1fe4/script.js"></script>
+      <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/destination?id=G-0GXH3LFTN2&amp;l=dataLayer&amp;cx=c"></script>
+      <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
+      <script type="text/javascript" async="" src="https://analytics.tiktok.com/i18n/pixel/static/main.MWNkZmM2YTcxMA.js"
+        data-id="CJ67GBJC77U5K7SP5G20"></script>
+      <script type="text/javascript" async=""
+        src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=CJ67GBJC77U5K7SP5G20&amp;lib=ttq"></script>
+      <script src="//bat.bing.com/bat.js" async=""></script>
+      <script
+        src="https://connect.facebook.net/signals/config/233182517365050?v=2.9.138&amp;r=stable&amp;domain=cart.hostinger.com"
+        async=""></script>
+      <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+      <script type="text/javascript" async="" src="https://a.quora.com/qevents.js"></script>
+      <script type="text/javascript" async=""
+        src="https://www.googletagmanager.com/gtag/js?id=G-73N1QWLEMH&amp;l=dataLayer&amp;cx=c"></script>
+      <script type="text/javascript" async="" src="https://www.redditstatic.com/ads/pixel.js"></script>
+      <script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-1037863.js?sv=7"></script>
+      <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+      <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KL4FQVG"></script>
+      <script src="https://js.hcaptcha.com/1/api.js" async="" defer=""></script>
+      <script>
+        window.__DEFAULT_IMPORT_MAP__ = [
+          {
+            tag: "script",
+            src: "https://cart.hostinger.com/assets/index-5759f40b.js",
+            type: "module",
+          },
+          {
+            tag: "link",
+            href: "https://cart.hostinger.com/assets/index-0e96a470.css",
+            rel: "stylesheet",
+          },
+        ];
+      </script>
+      <script>
+        (function () {
+          "use strict";
+          const i = "8080",
+            a = "https://hcart-frontend-prod-pr-{PR_NUMBER}.hostinger.dev",
+            s = "preview-import-map.js",
+            p = () => {
+              const e = window.location.search,
+                t = new URLSearchParams(e),
+                n = { previewApp: "", reset: "" };
+              for (const [r, c] of t.entries()) n[r] = c;
+              return n;
+            },
+            l = () => {
+              const e = localStorage.getItem(o);
+              if (!e) return;
+              const t = document.createElement("div");
+              (t.innerHTML = `Reset preview - ${e}`),
+                Object.entries({
+                  position: "fixed",
+                  bottom: "15px",
+                  left: "15px",
+                  padding: "0px 4px",
+                  fontSize: "10px",
+                  fontWeight: "bold",
+                  color: "#fff",
+                  backgroundColor: "#f00",
+                  zIndex: "9999",
+                  cursor: "pointer",
+                  "border-radius": "4px",
+                }).forEach(([r, c]) => {
+                  t.style[r] = c;
+                }),
+                window.setTimeout(() => document.body.appendChild(t), 500),
+                t.addEventListener("click", () => {
+                  localStorage.removeItem(o), location.reload();
+                });
+            },
+            o = "preview-app",
+            d = () => {
+              const e = new URL(window.location.href);
+              e.searchParams.delete("previewApp"), e.searchParams.delete("reset");
+              const t = e.href;
+              window.history.replaceState(null, "", t);
+            },
+            m = () => {
+              const { previewApp: e, reset: t } = p();
+              t && localStorage.removeItem(o),
+                e && localStorage.setItem(o, e),
+                l(),
+                !(!e && !t) && d();
+            },
+            P = () => {
+              const e = localStorage.getItem(o);
+              if (e) {
+                if (e === "local") return `http://localhost:${i}`;
+                if (parseInt(e)) return a.replace("{PR_NUMBER}", e);
+              }
+            },
+            E = {
+              script: (e) => {
+                const t = document.createElement("script");
+                return (
+                  (t.src = e.src),
+                  (t.type = e.type),
+                  (t.crossOrigin = ""),
+                  (t.defer = !0),
+                  t
+                );
+              },
+              link: (e) => {
+                const t = document.createElement("link");
+                return (t.rel = e.rel), (t.href = e.href), t;
+              },
+            },
+            _ = async (e) => {
+              const t = document.getElementsByTagName("head")[0],
+                n = document.createDocumentFragment();
+              e == null ||
+                e.forEach((r) => {
+                  const c = E[r.tag],
+                    w = c(r);
+                  n.appendChild(w);
+                }),
+                t.appendChild(n);
+            },
+            u = (e) =>
+              new Promise((t) => {
+                if (!e) return t(window.__DEFAULT_IMPORT_MAP__);
+                const n = document.getElementsByTagName("head")[0],
+                  r = document.createElement("script");
+                (r.src = e),
+                  (r.crossOrigin = ""),
+                  n.appendChild(r),
+                  r.addEventListener("load", () =>
+                    t(window.__PREVIEW_IMPORT_MAP__)
+                  );
+              });
+          (async () => {
+            m();
+            const e = P(),
+              t = e ? `${e}/${s}` : void 0,
+              n = await u(t);
+            _(n);
+          })();
+        })();
+      </script>
+      <script src="https://cart.hostinger.com/assets/index-5759f40b.js" type="module" crossorigin="" defer=""></script>
+      <link rel="stylesheet" href="https://cart.hostinger.com/assets/index-0e96a470.css" />
+      <script type="module">
+        import.meta.url;
+        import("_").catch(() => 1);
+        async function* g() { }
+        if (location.protocol != "file:") {
+          window.__vite_is_modern_browser = true;
+        }
+      </script>
+      <script type="module">
+        !(function () {
+          if (window.__vite_is_modern_browser) return;
+          console.warn(
+            "vite: loading legacy chunks, syntax error above and the same error below should be ignored"
+          );
+          var e = document.getElementById("vite-legacy-polyfill"),
+            n = document.createElement("script");
+          (n.src = e.src),
+            (n.onload = function () {
+              System.import(
+                document
+                  .getElementById("vite-legacy-entry")
+                  .getAttribute("data-src")
+              );
+            }),
+            document.body.appendChild(n);
+        })();
+      </script>
+      <link rel="stylesheet" href="https://cart.hostinger.com/assets/LocationFormSection-5a9d6ae9.css" />
+      <link rel="stylesheet" href="https://cart.hostinger.com/assets/SelectPayment-6e7c79ad.css" />
+      <link rel="stylesheet" href="https://cart.hostinger.com/assets/Cart-1bac38ca.css" />
+      <link rel="modulepreload" as="script" crossorigin=""
+        href="https://cart.hostinger.com/assets/ProcessoutHandler-d04facf2.js" />
+      <link rel="modulepreload" as="script" crossorigin="" href="https://cart.hostinger.com/assets/index-5759f40b.js" />
+      <link rel="stylesheet" href="https://cart.hostinger.com/assets/ProcessoutHandler-989ff3b4.css" />
+      <script id="risk-js" src="https://risk.checkout.com/cdn/risk/1/risk.js"></script>
+      <script id="processout" src="https://js.processout.com/processout.js"></script>
+      <script id="script-processout-1">
+        function makeRequestByMethod(
+          method,
+          url,
+          postData,
+          callback,
+          synchronous
+        ) {
+          var http = new XMLHttpRequest();
+          http.onreadystatechange = function () {
+            if (http.readyState === 4) {
+              if (http.status < 500) {
+                var response = JSON.parse(http.responseText);
+    
+                if (http.status !== 200) {
+                  document.dispatchEvent(
+                    createEvent("payment.failed", {
+                      message: response.error.message,
+                    })
+                  );
+                  return;
+                }
+    
+                return callback(response);
+              }
+    
+              document.dispatchEvent(
+                createEvent("payment.failed", {
+                  message: "Oops, unexpected error occurred",
+                })
+              );
+            }
+          };
+    
+          http.open(method, url, synchronous !== true);
+          http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          http.setRequestHeader("Accept", "application/json");
+          http.send(JSON.stringify(postData));
+        }
+        function makeRequest(url, postData, callback) {
+          return makeRequestByMethod("POST", url, postData, callback);
+        }
+        function makeGetRequest(url, postData, callback, synchronous) {
+          return makeRequestByMethod("GET", url, postData, callback, synchronous);
+        }
+        function makeFormRequest(formId, url, callback) {
+          let inputs = document.querySelectorAll(
+            "#" + formId + " input, #" + formId + " select"
+          );
+          let formData = {};
+          for (
+            let inputIterator = 0;
+            inputIterator < inputs.length;
+            inputIterator++
+          ) {
+            let selectedInput = inputs[inputIterator];
+            if (selectedInput.name) {
+              formData[selectedInput.name] = selectedInput.value;
+            }
+          }
+          if (null === url) {
+            url = document.getElementById(formId).action;
+          }
+          return makeRequestByMethod("POST", url, formData, callback);
+        }
+        function createEvent(event, message) {
+          return new CustomEvent(event, {
+            detail: message,
+          });
+        }
+        function setElementHidden(elementId, state) {
+          let loader = document.getElementById(elementId);
+          loader.hidden = state;
+        }
+        function appendHiddenInput(appentToId, inputId, inputName, inputValue) {
+          let hiddenInput = document.createElement("input");
+          hiddenInput.type = "hidden";
+          hiddenInput.id = inputId;
+          hiddenInput.name = inputName;
+          hiddenInput.value = inputValue;
+          document.getElementById(appentToId).appendChild(hiddenInput);
+        }
+        function getQueryVar(variable) {
+          let query = window.location.search.substring(1);
+          let vars = query.split("&");
+          for (let i = 0; i < vars.length; i++) {
+            let pair = vars[i].split("=");
+            if (pair[0] === variable) {
+              return pair[1];
+            }
+          }
+          return false;
+        }
+        function getQueryVars(vars) {
+          let qry = "";
+          for (let i = 0; i < vars.length; i++) {
+            let qryVal = getQueryVar(vars[i]);
+            if (false !== qryVal) {
+              qry += (qry === "" ? "" : "&") + vars[i] + "=" + qryVal;
+            }
+          }
+    
+          return qry;
+        }
+        function getQueryToAppend() {
+          let qry = getQueryVars(["currency", "country", "amount"]);
+          if (qry) {
+            qry = "?" + qry;
+          }
+    
+          return qry;
+        }
+        function docReady(fn) {
+          if (
+            document.readyState === "complete" ||
+            document.readyState === "interactive"
+          ) {
+            setTimeout(fn, 1);
+          } else {
+            document.addEventListener("DOMContentLoaded", fn);
+          }
+        }
+      </script>
+      <script id="script-processout-2">
+        var error = document.getElementById("errors");
+        var success = document.getElementById("success");
+        var processoutPublicKey = "proj_KjM2GnoleisdUgtyPMjcDudeis1TBSDP";
+        var errorCodes = {
+        };
+    
+        function togglePaymentButton(disable) {
+          var paymentButton = document.getElementById("payment-btn");
+          if (disable) {
+            paymentButton.disabled = disable;
+            return;
+          }
+    
+          if (paymentButton && paymentButton.hasAttribute("disabled")) {
+            paymentButton.removeAttribute("disabled");
+          }
+        }
+    
+        function buildProcessoutClient() {
+          return new ProcessOut.ProcessOut(processoutPublicKey);
+        }
+    
+        function detectCard(e) {
+          let cardLogoMap = {
+            visa: "visa",
+            mastercard: "mastercard",
+            "american-express": "amex",
+            "union-pay": "unionpay",
+            "diners-club": "diners",
+            discover: "discover",
+            jcb: "jcb",
+            maestro: "maestro",
+            hipercard: "hipercard",
+            elo: "elo",
+          };
+          let cardLogo =
+            "https://payments.hostinger.com/img/card-logos/default.svg";
+          if (
+            e.schemes.length === 1 &&
+            cardLogoMap.hasOwnProperty(e.schemes[0])
+          ) {
+            cardLogo =
+              "https://payments.hostinger.com/img/card-logos/" +
+              cardLogoMap[e.schemes[0]] +
+              ".svg";
+          }
+          document.querySelector(".card-logo").src = cardLogo;
+        }
+    
+        window.updatePaymentAmount = function (price) {
+          let installments = document.querySelector("#installments");
+          let addMore = installments.getAttribute("data-add-more-msg");
+          let currencyPrecision = parseInt(
+            installments.getAttribute("data-currency-precision")
+          );
+          let currencySymbol = installments.getAttribute("data-currency-symbol");
+          let ratesMessage = installments.getAttribute("data-interest-rates-msg");
+          let installmentOptions = document.querySelectorAll(
+            "#installments option"
+          );
+          for (let i = 0, len = installmentOptions.length; i < len; i++) {
+            let installmentOption = installmentOptions[i];
+            let minAmount =
+              installmentOption.getAttribute("data-min-amount") /
+              10 ** currencyPrecision;
+            let monthCount = installmentOption.getAttribute("data-month");
+            let monthTranslated = installments.getAttribute(
+              "data-str-month" + (monthCount > 1 ? "s" : "")
+            );
+            let rate = installmentOption.getAttribute("data-rate");
+            let monthString = monthCount + " " + monthTranslated;
+            let priceString = "";
+            if (isNaN(rate) || rate == 0.0) {
+              priceString = ratesMessage;
+            } else {
+              let total = price * rate;
+              let totalStr = currencySymbol + total.toFixed(currencyPrecision);
+              let subTotalStr =
+                currencySymbol + (total / monthCount).toFixed(currencyPrecision);
+              priceString = subTotalStr + " (" + totalStr + ")";
+            }
+            let itemString = monthString + " " + priceString;
+            if (price >= minAmount) {
+              if (installmentOption.hasAttribute("disabled")) {
+                installmentOption.removeAttribute("disabled");
+              }
+            } else {
+              if (!installmentOption.hasAttribute("disabled")) {
+                installmentOption.setAttribute("disabled", "disabled");
+              }
+              let replacement =
+                currencySymbol + (minAmount - price).toFixed(currencyPrecision);
+              itemString += " " + addMore.replace(":placeHolder", replacement);
+            }
+            installmentOption.selected = false;
+            installmentOption.innerText = itemString;
+          }
+        };
+    
+        document.addEventListener("DOMContentLoaded", function () {
+          var processout = buildProcessoutClient();
+          processout.setupForm(
+            document.getElementById("payment-form"),
+            {
+              requireCVC: true,
+              style: {
+                fontSize: "16px",
+                "::placeholder": {
+                  color: "#727586",
+                },
+              },
+            },
+            function (form) {
+              initializeForm(form);
+            },
+            function (error) {
+              document.dispatchEvent(
+                createEvent("payment.failed-initializing", {
+                  message: "failed-initializing",
+                })
+              );
+            }
+          );
+    
+          function initializeForm(form) {
+            form.addEventListener("submit", function (event) {
+              handleFormSubmit(event, form);
+            });
+            let numberField = form.getNumberField();
+            numberField.on("keyup", detectCard);
+            numberField.on("change", detectCard);
+          }
+    
+          function doFormSubmit(form) {
+            if (typeof window.forterToken === "string") {
+              appendHiddenInput(
+                "payment-form",
+                "forter_token",
+                "forter_token",
+                window.forterToken
+              );
+            }
+    
+            document.dispatchEvent(
+              createEvent("payment.establishing", { message: "establishing" })
+            );
+            togglePaymentButton(true);
+            processout.tokenize(
+              form,
+              {
+                name: document.getElementById("cardholdername").value,
+              },
+              function (cardToken) {
+                document.getElementById("processout_token").value = cardToken;
+                document.dispatchEvent(
+                  createEvent("payment.card-tokenized", {
+                    cardToken: cardToken,
+                    callback: function (invoiceId, customerId) {
+                      handle3ds(invoiceId, customerId);
+                    },
+                  })
+                );
+              },
+              function (error) {
+                let errorMessages = {
+                  "The card number is invalid.": "The card number is invalid.",
+                  "The card CVC is required.": "The card CVC is required.",
+                  "The card expiry month is invalid.":
+                    "The card expiry month is invalid.",
+                };
+                let message = error.message;
+                if (errorMessages.hasOwnProperty(message)) {
+                  message = errorMessages[message];
+                } else if (
+                  errorCodes.hasOwnProperty("processout." + error.code)
+                ) {
+                  message = errorCodes["processout." + error.code];
+                }
+                document.dispatchEvent(
+                  createEvent("payment.invalid-details", {
+                    message: message,
+                    code: error.code,
+                  })
+                );
+                togglePaymentButton(false);
+              }
+            );
+          }
+    
+          function handleFormSubmit(event, form) {
+            event.preventDefault();
+            getRiskSessionId()
+              .then((riskJsToken) => {
+                appendHiddenInput(
+                  "payment-form",
+                  "riskjs_token",
+                  "riskjs_token",
+                  riskJsToken
+                );
+              })
+              .catch((error) => {
+                console.log(error);
+                document.dispatchEvent(
+                  createEvent("payment.failed", {
+                    message: error,
+                    code: error.code,
+                  })
+                );
+              })
+              .finally(() => {
+                doFormSubmit(form);
+    
+                return false;
+              });
+          }
+    
+          function handle3ds(invoiceId, customerId) {
+            processout.makeCardPayment(
+              invoiceId,
+              customerId,
+              {},
+              function () {
+                appendHiddenInput(
+                  "payment-form",
+                  "invoice_id",
+                  "invoice_id",
+                  invoiceId
+                );
+                appendHiddenInput(
+                  "payment-form",
+                  "customer_id",
+                  "customer_id",
+                  customerId
+                );
+                makeFormRequest("payment-form", null, function (response) {
+                  document.dispatchEvent(
+                    createEvent("payment.completed", {
+                      message: "Success",
+                      response: response,
+                    })
+                  );
+                });
+              },
+              function (error) {
+                let errorMessages = {
+                  "The card number is invalid.": "The card number is invalid.",
+                  "The card CVC is required.": "The card CVC is required",
+                  "The card expiry month is invalid.":
+                    "The card expiry month is invalid.",
+                };
+                let message = error.message;
+                if (window.loadedCorrections.hasOwnProperty(message)) {
+                  message = window.loadedCorrections[message];
+                } else if (errorMessages.hasOwnProperty(message)) {
+                  message = errorMessages[message];
+                } else if (
+                  errorCodes.hasOwnProperty("processout." + error.code)
+                ) {
+                  message = errorCodes["processout." + error.code];
+                }
+    
+                document.dispatchEvent(
+                  createEvent("payment.failed", {
+                    message: message,
+                    code: error.code,
+                  })
+                );
+                togglePaymentButton(false);
+              }
+            );
+          }
+        });
+      </script>
+      <script id="script-processout-3">
+        document.addEventListener("ftr:tokenReady", function (evt) {
+          window.forterToken = evt.detail;
+        });
+      </script>
+      <script id="script-processout-4">
+        (function () {
+          var merchantConfig = {
+            csp: false,
+          };
+    
+          var siteId = "5e3d9c9d1fe4";
+          function t(t, n) {
+            for (var e = t.split(""), r = 0; r < e.length; ++r)
+              e[r] = String.fromCharCode(e[r].charCodeAt(0) + n);
+            return e.join("");
+          }
+          function n(n) {
+            return t(n, -S).replace(/%SN%/g, siteId);
+          }
+          function e() {
+            var t = "no" + "op" + "fn",
+              n = "g" + "a",
+              e = "n" + "ame";
+            return window[n] && window[n][e] === t;
+          }
+          function r() {
+            return !(
+              !navigator.brave || "function" != typeof navigator.brave.isBrave
+            );
+          }
+          function o() {
+            return document.currentScript && document.currentScript.src;
+          }
+          function i(t) {
+            try {
+              (B.ex = t),
+                e() && -1 === B.ex.indexOf(R.uB) && (B.ex += R.uB),
+                r() && -1 === B.ex.indexOf(R.uBr) && (B.ex += R.uBr),
+                o() && -1 === B.ex.indexOf(R.nIL) && (B.ex += R.nIL),
+                window.ftr__snp_cwc || (B.ex += R.s),
+                F(B);
+            } catch (t) { }
+          }
+          function c(t, n) {
+            function e(o) {
+              try {
+                o.blockedURI === t && (n(), document.removeEventListener(r, e));
+              } catch (t) {
+                document.removeEventListener(r, e);
+              }
+            }
+            var r = "securitypolicyviolation";
+            document.addEventListener(r, e),
+              setTimeout(function () {
+                document.removeEventListener(r, e);
+              }, 2 * 60 * 1e3);
+          }
+          function a(t, n, e, r) {
+            var o = !1;
+            (t = "https://" + t),
+              c(t, function () {
+                r(!0), (o = !0);
+              });
+            var i = document.createElement("script");
+            (i.onerror = function () {
+              if (!o)
+                try {
+                  r(!1), (o = !0);
+                } catch (t) { }
+            }),
+              (i.onload = e),
+              (i.type = "text/javascript"),
+              (i.id = "ftr__script"),
+              (i.async = !0),
+              (i.src = t);
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(i, a);
+          }
+          function u(t, n, e, r) {
+            var o = !1,
+              i = new XMLHttpRequest();
+            if (
+              (c("https:" + t, function () {
+                e(new Error("CSP Violation"), !0), (o = !0);
+              }),
+                "withCredentials" in i)
+            )
+              i.open("GET", t, !0);
+            else {
+              if ("undefined" == typeof XDomainRequest) return;
+              (i = new XDomainRequest()), i.open("GET", t);
+            }
+            Object.keys(r).forEach(function (t) {
+              i.setRequestHeader(t, r[t]);
+            }),
+              (i.onload = function () {
+                "function" == typeof n && n(i);
+              }),
+              (i.onerror = function (t) {
+                if ("function" == typeof e && !o)
+                  try {
+                    e(t, !1), (o = !0);
+                  } catch (t) { }
+              }),
+              (i.onprogress = function () { }),
+              (i.ontimeout = function () {
+                "function" == typeof e && e("tim" + "eo" + "ut", !1);
+              }),
+              setTimeout(function () {
+                i.send();
+              }, 0);
+          }
+          function d(t, siteId, n) {
+            function e(t) {
+              var n = t.toString(16);
+              return n.length % 2 ? "0" + n : n;
+            }
+            function r(t) {
+              if (t <= 0) return "";
+              for (var n = "0123456789abcdef", e = "", r = 0; r < t; r++)
+                e += n[Math.floor(Math.random() * n.length)];
+              return e;
+            }
+            function o(t) {
+              for (var n = "", r = 0; r < t.length; r++) n += e(t.charCodeAt(r));
+              return n;
+            }
+            function i(t) {
+              for (var n = t.split(""), e = 0; e < n.length; ++e)
+                n[e] = String.fromCharCode(255 ^ n[e].charCodeAt(0));
+              return n.join("");
+            }
+            n = n ? "1" : "0";
+            var c = [];
+            return (
+              c.push(t),
+              c.push(siteId),
+              c.push(n),
+              (function (t) {
+                var n = 40,
+                  e = "";
+                return (
+                  t.length < n / 2 && (e = "," + r(n / 2 - t.length - 1)),
+                  o(i(t + e))
+                );
+              })(c.join(","))
+            );
+          }
+          function f() {
+            function t() {
+              C && (Q(R.dUAL), setTimeout(s, E, R.dUAL));
+            }
+            function n(t, n) {
+              i(n ? R.uAS + R.uF + R.cP : R.uAS + R.uF);
+            }
+            window.ftr__fdad(t, n);
+          }
+          function s(t) {
+            try {
+              var n = t === R.uDF ? q : C;
+              if (!n) return;
+              a(
+                n,
+                void 0,
+                function () {
+                  try {
+                    X(), i(t + R.uS);
+                  } catch (t) { }
+                },
+                function (n) {
+                  try {
+                    X(),
+                      (B.td = 1 * new Date() - B.ts),
+                      i(n ? t + R.uF + R.cP : t + R.uF),
+                      t === R.uDF && f();
+                  } catch (t) {
+                    i(R.eUoe);
+                  }
+                }
+              );
+            } catch (n) {
+              i(t + R.eTlu);
+            }
+          }
+          var h = "22g6otrwjeq6qsu1forxgiurqw1qhw2vwdwxv",
+            v = "fort",
+            w = "erTo",
+            l = "ken";
+          window.ftr__config = { m: merchantConfig, s: "15", si: siteId };
+          var m = !1,
+            p = v + w + l,
+            g = 10,
+            _ = {
+              write: function (t, n, e, r) {
+                void 0 === r && (r = !0);
+                var o, i;
+                if (
+                  (e
+                    ? ((o = new Date()),
+                      o.setTime(o.getTime() + 24 * e * 60 * 60 * 1e3),
+                      (i = "; expires=" + o.toGMTString()))
+                    : (i = ""),
+                    !r)
+                )
+                  return void (document.cookie =
+                    escape(t) + "=" + escape(n) + i + "; path=/");
+                for (
+                  var c = 1, a = document.domain.split("."), u = g, d = !0;
+                  d && a.length >= c && u > 0;
+    
+                ) {
+                  var f = a.slice(-c).join(".");
+                  document.cookie =
+                    escape(t) + "=" + escape(n) + i + "; path=/; domain=" + f;
+                  var s = _.read(t);
+                  (null != s && s == n) ||
+                    ((f = "." + f),
+                      (document.cookie =
+                        escape(t) + "=" + escape(n) + i + "; path=/; domain=" + f)),
+                    (d = -1 === document.cookie.indexOf(t + "=" + n)),
+                    c++,
+                    u--;
+                }
+              },
+              read: function (t) {
+                var n = null;
+                try {
+                  for (
+                    var e = escape(t) + "=",
+                    r = document.cookie.split(";"),
+                    o = 32,
+                    i = 0;
+                    i < r.length;
+                    i++
+                  ) {
+                    for (var c = r[i]; c.charCodeAt(0) === o;)
+                      c = c.substring(1, c.length);
+                    0 === c.indexOf(e) &&
+                      (n = unescape(c.substring(e.length, c.length)));
+                  }
+                } finally {
+                  return n;
+                }
+              },
+            },
+            y = window.ftr__config.s;
+          y += "ck";
+          var T = function (t) {
+            if (document.head) {
+              var n = (function () {
+                var n = document.createElement("link");
+                return (
+                  n.setAttribute("rel", "pre" + "con" + "nect"),
+                  n.setAttribute("cros" + "sori" + "gin", "anonymous"),
+                  (n.onload = function () {
+                    document.head.removeChild(n);
+                  }),
+                  (n.onerror = function (t) {
+                    document.head.removeChild(n);
+                  }),
+                  n.setAttribute("href", t),
+                  document.head.appendChild(n),
+                  n
+                );
+              })();
+              setTimeout(function () {
+                document.head.removeChild(n);
+              }, 3e3);
+            }
+          },
+            S = 3,
+            x = n(h || "22g6otrwjeq6qsu1forxgiurqw1qhw2vwdwxv"),
+            A = t("[0Uhtxhvw0LG", -S),
+            L = t("[0Fruuhodwlrq0LG", -S),
+            k = t("Li0Qrqh0Pdwfk", -S),
+            C,
+            U = "fgq71iruwhu1frp",
+            q = n("(VQ(1" + U + "2vq2(VQ(2vfulsw1mv"),
+            D = n("(VQ(1" + U + "2vqV2(VQ(2vfulsw1mv"),
+            E = 10;
+          window.ftr__startScriptLoad = 1 * new Date();
+          var b = function (t) {
+            var n = "ft" + "r:tok" + "enR" + "eady";
+            window.ftr__tt && clearTimeout(window.ftr__tt),
+              (window.ftr__tt = setTimeout(function () {
+                try {
+                  delete window.ftr__tt, (t += "_tt");
+                  var e = document.createEvent("Event");
+                  e.initEvent(n, !1, !1),
+                    (e.detail = t),
+                    document.dispatchEvent(e);
+                } catch (t) { }
+              }, 1e3));
+          },
+            F = function (t) {
+              var n = function (t) {
+                return t || "";
+              },
+                e =
+                  n(t.id) +
+                  "_" +
+                  n(t.ts) +
+                  "_" +
+                  n(t.td) +
+                  "_" +
+                  n(t.ex) +
+                  "_" +
+                  n(y);
+              _.write(p, e, 400, !0), b(e), (window.ftr__gt = e);
+            },
+            I = function () {
+              var t = _.read(p) || "",
+                n = t.split("_"),
+                e = function (t) {
+                  return n[t] || void 0;
+                };
+              return { id: e(0), ts: e(1), td: e(2), ex: e(3), vr: e(4) };
+            },
+            V = (function () {
+              for (var t = {}, n = "fgu", e = [], r = 0; r < 256; r++)
+                e[r] = (r < 16 ? "0" : "") + r.toString(16);
+              var o = function (t, n, r, o, i) {
+                var c = i ? "-" : "";
+                return (
+                  e[255 & t] +
+                  e[(t >> 8) & 255] +
+                  e[(t >> 16) & 255] +
+                  e[(t >> 24) & 255] +
+                  c +
+                  e[255 & n] +
+                  e[(n >> 8) & 255] +
+                  c +
+                  e[((n >> 16) & 15) | 64] +
+                  e[(n >> 24) & 255] +
+                  c +
+                  e[(63 & r) | 128] +
+                  e[(r >> 8) & 255] +
+                  c +
+                  e[(r >> 16) & 255] +
+                  e[(r >> 24) & 255] +
+                  e[255 & o] +
+                  e[(o >> 8) & 255] +
+                  e[(o >> 16) & 255] +
+                  e[(o >> 24) & 255]
+                );
+              },
+                i = function () {
+                  if (
+                    window.Uint32Array &&
+                    window.crypto &&
+                    window.crypto.getRandomValues
+                  ) {
+                    var t = new window.Uint32Array(4);
+                    return (
+                      window.crypto.getRandomValues(t),
+                      { d0: t[0], d1: t[1], d2: t[2], d3: t[3] }
+                    );
+                  }
+                  return {
+                    d0: (4294967296 * Math.random()) >>> 0,
+                    d1: (4294967296 * Math.random()) >>> 0,
+                    d2: (4294967296 * Math.random()) >>> 0,
+                    d3: (4294967296 * Math.random()) >>> 0,
+                  };
+                },
+                c = function () {
+                  var t = "",
+                    n = function (t, n) {
+                      for (var e = "", r = t; r > 0; --r)
+                        e += n.charAt((1e3 * Math.random()) % n.length);
+                      return e;
+                    };
+                  return (
+                    (t += n(2, "0123456789")),
+                    (t += n(1, "123456789")),
+                    (t += n(8, "0123456789"))
+                  );
+                };
+              return (
+                (t.safeGenerateNoDash = function () {
+                  try {
+                    var t = i();
+                    return o(t.d0, t.d1, t.d2, t.d3, !1);
+                  } catch (t) {
+                    try {
+                      return n + c();
+                    } catch (t) { }
+                  }
+                }),
+                (t.isValidNumericalToken = function (t) {
+                  return (
+                    t &&
+                    t.toString().length <= 11 &&
+                    t.length >= 9 &&
+                    parseInt(t, 10).toString().length <= 11 &&
+                    parseInt(t, 10).toString().length >= 9
+                  );
+                }),
+                (t.isValidUUIDToken = function (t) {
+                  return t && 32 === t.toString().length && /^[a-z0-9]+$/.test(t);
+                }),
+                (t.isValidFGUToken = function (t) {
+                  return 0 == t.indexOf(n) && t.length >= 12;
+                }),
+                t
+              );
+            })(),
+            R = {
+              uDF: "UDF",
+              dUAL: "dUAL",
+              uAS: "UAS",
+              mLd: "1",
+              eTlu: "2",
+              eUoe: "3",
+              uS: "4",
+              uF: "9",
+              tmos: ["T5", "T10", "T15", "T30", "T60"],
+              tmosSecs: [5, 10, 15, 30, 60],
+              bIR: "43",
+              uB: "u",
+              uBr: "b",
+              cP: "c",
+              nIL: "i",
+              s: "s",
+            };
+          try {
+            var B = I();
+            try {
+              B.id &&
+                (V.isValidNumericalToken(B.id) ||
+                  V.isValidUUIDToken(B.id) ||
+                  V.isValidFGUToken(B.id))
+                ? (window.ftr__ncd = !1)
+                : ((B.id = V.safeGenerateNoDash()), (window.ftr__ncd = !0)),
+                (B.ts = window.ftr__startScriptLoad),
+                F(B),
+                (window.ftr__snp_cwc = !!_.read(p)),
+                window.ftr__snp_cwc || (q = D);
+              for (
+                var G = "for" + "ter" + ".co" + "m",
+                M = "ht" + "tps://c" + "dn9." + G,
+                O = "ht" + "tps://" + B.id + "-" + siteId + ".cd" + "n." + G,
+                j = "http" + "s://cd" + "n3." + G,
+                N = [M, O, j],
+                H = 0;
+                H < N.length;
+                H++
+              )
+                T(N[H]);
+              var P = new Array(R.tmosSecs.length),
+                Q = function (t) {
+                  for (var n = 0; n < R.tmosSecs.length; n++)
+                    P[n] = setTimeout(i, 1e3 * R.tmosSecs[n], t + R.tmos[n]);
+                },
+                X = function () {
+                  for (var t = 0; t < R.tmosSecs.length; t++) clearTimeout(P[t]);
+                };
+              (window.ftr__fdad = function (n, e) {
+                if (!m) {
+                  m = !0;
+                  var r = {};
+                  (r[k] = d(
+                    window.ftr__config.s,
+                    siteId,
+                    window.ftr__config.m.csp
+                  )),
+                    u(
+                      x,
+                      function (e) {
+                        try {
+                          var r = e.getAllResponseHeaders().toLowerCase();
+                          if (r.indexOf(L.toLowerCase()) >= 0) {
+                            var o = e.getResponseHeader(L);
+                            window.ftr__altd2 = t(atob(o), -S - 1);
+                          }
+                          if (r.indexOf(A.toLowerCase()) < 0) return;
+                          var i = e.getResponseHeader(A),
+                            c = t(atob(i), -S - 1);
+                          if (c) {
+                            var a = c.split(":");
+                            if (a && 2 === a.length) {
+                              for (
+                                var u = a[0], d = a[1], f = "", s = 0, h = 0;
+                                s < 20;
+                                ++s
+                              )
+                                f +=
+                                  s % 3 > 0 && h < 12
+                                    ? siteId.charAt(h++)
+                                    : B.id.charAt(s);
+                              var v = d.split(",");
+                              if (v.length > 1) {
+                                var w = v[0],
+                                  l = v[1];
+                                C = u + "/" + w + "." + f + "." + l;
+                              }
+                            }
+                          }
+                          n();
+                        } catch (t) { }
+                      },
+                      function (t, n) {
+                        e && e(t, n);
+                      },
+                      r
+                    );
+                }
+              }),
+                Q(R.uDF),
+                setTimeout(s, E, R.uDF);
+            } catch (t) {
+              i(R.mLd);
+            }
+          } catch (t) { }
+        })();
+      </script>
+      <script id="script-processout-5">
+        function loadRiskJs(attempt = 1) {
+          if (attempt <= 5) {
+            try {
+              if (typeof window.Risk !== "undefined") {
+                window.RiskJs = window.Risk.init(
+                  "pk_6b7vb7srqgskhe7dmgqcatupbuk"
+                );
+              } else {
+                let riskJsScript = document.getElementById("risk-js");
+                if (riskJsScript) {
+                  riskJsScript.addEventListener("load", () => {
+                    window.RiskJs = window.Risk.init(
+                      "pk_6b7vb7srqgskhe7dmgqcatupbuk"
+                    );
+                  });
+                } else {
+                  msSleep(100);
+                  loadRiskJs(attempt + 1);
+                }
+              }
+            } catch (Error) {
+              console.error("Failed to load risk.js", Error);
+              reportErrMessage(
+                typeof Error.message !== "undefined" ? Error.message : Error
+              );
+              msSleep(100);
+              loadRiskJs(attempt + 1);
+            }
+          }
+        }
+    
+        loadRiskJs();
+    
+        async function msSleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+    
+        async function getRiskSessionId(attempt = 1) {
+          if (attempt <= 5 && null !== window.RiskJs) {
+            try {
+              return await window.RiskJs.publishRiskData();
+            } catch (Error) {
+              console.error("Failed to get risk.js SessionID", Error);
+              reportErrMessage(
+                typeof Error.message !== "undefined" ? Error.message : Error
+              );
+              await msSleep(200);
+              return await getRiskSessionId(attempt + 1);
+            }
+          }
+          return await new Promise((resolve) => {
+            resolve(null);
+          });
+        }
+    
+        function reportErrMessage(message) {
+          console.error("Unexpected error", message);
+        }
+      </script>
+</head>
+<body>
+    <div class="domain-select__wrapper">
+        <div class="app-container ng-scope" ng-app="dateTimeApp" ng-controller="dateTimeCtrl as ctrl">
+
+          <div date-picker="" datepicker-title="Select Date" picktime="true" pickdate="true" pickpast="false" mondayfirst="false" custom-message="You have selected" selecteddate="ctrl.selected_date" updatefn="ctrl.updateDate(newdate)" class="ng-isolate-scope">
+
+            <div class="datepicker ng-scope am" ng-class="{
+                      'am': timeframe == 'am',
+                      'pm': timeframe == 'pm',
+                      'compact': compact
+                  }">
+              <div class="datepicker-header">
+                <!-- ngIf: datepicker_title --><div class="datepicker-title ng-binding ng-scope" ng-if="datepicker_title">Select Date</div><!-- end ngIf: datepicker_title -->
+                <div class="datepicker-subheader ng-binding">You have selected Tuesday January 23, 2024</div>
+              </div>
+              <div class="datepicker-calendar">
+                <div class="calendar-header">
+                  <!-- ngIf: pickdate --><div class="goback ng-scope" ng-click="moveBack()" ng-if="pickdate">
+                    <svg width="30" height="30">
+                      <path fill="none" stroke="#0DAD83" stroke-width="3" d="M19,6 l-9,9 l9,9"></path>
+                    </svg>
+                  </div><!-- end ngIf: pickdate -->
+                  <div class="current-month-container ng-binding">2024 January
+                  </div>
+                  <!-- ngIf: pickdate --><div class="goforward ng-scope" ng-click="moveForward()" ng-if="pickdate">
+                    <svg width="30" height="30">
+                      <path fill="none" stroke="#0DAD83" stroke-width="3" d="M11,6 l9,9 l-9,9"></path>
+                    </svg>
+                  </div><!-- end ngIf: pickdate -->
+                </div>
+                <div class="calendar-day-header">
+                  <!-- ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Sun</span><!-- end ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Mon</span><!-- end ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Tue</span><!-- end ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Wed</span><!-- end ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Thu</span><!-- end ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Fri</span><!-- end ngRepeat: day in days --><span ng-repeat="day in days" class="day-label ng-binding ng-scope">Sat</span><!-- end ngRepeat: day in days -->
+                </div>
+                <div class="calendar-grid" ng-class="{false: 'no-hover'}[pickdate]">
+                  <!-- ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="" style="margin-left: 14.2857%;">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      1
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      2
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      3
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      4
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      5
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      6
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      7
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      8
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      9
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      10
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      11
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      12
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      13
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      14
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      15
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope no-hover" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      16
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      17
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      18
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      19
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      20
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      21
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      22
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding day-selected" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      23
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      24
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      25
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      26
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      27
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      28
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      29
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      30
+                    </div>
+                  </div><!-- end ngRepeat: day in month --><div ng-class="{'no-hover': !day.showday}" ng-repeat="day in month" class="datecontainer ng-scope" ng-style="{'margin-left': calcOffset(day, $index)}" track="" by="" $index="">
+                    <div class="datenumber ng-binding" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                      31
+                    </div>
+                  </div><!-- end ngRepeat: day in month -->
+                </div>
+              </div>
+              <!-- ngIf: picktime == 'true' --><div class="timepicker ng-scope" ng-if="picktime == 'true'">
+                <div ng-class="{'am': timeframe == 'am', 'pm': timeframe == 'pm' }" class="am">
+                  <div class="timepicker-container-outer" selectedtime="time" timetravel="">
+                    <div class="timepicker-container-inner">
+                      <div class="timeline-container" ng-mousedown="timeSelectStart($event)" sm-touchstart="timeSelectStart($event)">
+                        <div class="current-time" style="transition: transform 0.4s ease 0s; transform: translateX(265px);">
+                          <div class="actual-time ng-binding">10:00</div>
+                        </div>
+                        <div class="timeline">
+                        </div>
+                        <div class="hours-container">
+                          <!-- ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index --><div class="hour-mark ng-scope" ng-repeat="hour in getHours() track by $index"></div><!-- end ngRepeat: hour in getHours() track by $index -->
+                        </div>
+                      </div>
+                      <div class="display-time">
+                        <div class="decrement-time" ng-click="adjustTime('decrease')">
+                          <svg width="24" height="24">
+                            <path stroke="white" stroke-width="2" d="M8,12 h8"></path>
+                          </svg>
+                        </div>
+                        <div class="time" ng-class="{'time-active': edittime.active}">
+                          <input type="text" class="time-input ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="edittime.input" ng-keydown="changeInputTime($event)" ng-focus="edittime.active = true; edittime.digits = [];" ng-blur="edittime.active = false">
+                          <div class="formatted-time ng-binding">10:00 am</div>
+                        </div>
+                        <div class="increment-time" ng-click="adjustTime('increase')">
+                          <svg width="24" height="24">
+                            <path stroke="white" stroke-width="2" d="M12,7 v10 M7,12 h10"></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="am-pm-container">
+                        <div class="am-pm-button" ng-click="changetime('am');">am</div>
+                        <div class="am-pm-button" ng-click="changetime('pm');">pm</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- end ngIf: picktime == 'true' -->
+
+              <!-- <div class="buttons-container">
+                      <div class="cancel-button">CANCEL</div>
+                      <div class="save-button">SAVE</div>
+                  </div> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- <div class="pp-upsell__wrapper pp-addon">
+            <div class="separator"></div>
+            <div class="pp-upsell__content">
+              <div class="pp-upsell__details">
+                <p class="pp-upsell__text">
+                  <strong>FREE</strong> domain privacy protection included
+                </p>
+                <span
+                  data-v-b45ae079=""
+                  class="h-icon h-ml-8 h-tooltip-activator"
+                  ><svg
+                    data-v-b45ae079=""
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="18"
+                    width="18"
+                    viewBox="0 0 24 24"
+                    aria-labelledby="help"
+                    role="presentation"
+                    class="h-icon primary"
+                  >
+                    <g data-v-b45ae079="">
+                      <path
+                        data-v-b45ae079=""
+                        d="M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C16.4301 4 20 7.56988 20 12C20 16.4301 16.4301 20 12 20C7.56988 20 4 16.4301 4 12C4 7.56988 7.56988 4 12 4ZM12 6C9.79 6 8 7.79 8 10H10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 12 11 12.367 11 15H13C13 13.349 16 12.5 16 10C16 7.79 14.21 6 12 6ZM11 16V18H13V16H11Z"
+                      ></path>
+                    </g></svg
+                ></span>
+                <div
+                  class="h-tooltip"
+                  role="tooltip"
+                  data-popper-placement="top"
+                  style="
+                    position: absolute;
+                    inset: auto auto 0px 0px;
+                    margin: 0px;
+                    transform: translate(615px, -252px);
+                  "
+                >
+                  <span class="h-tooltip__content"
+                    >Domain privacy protection hides your personal
+                    information. It helps to avoid spam and keeps your data
+                    safe from the public.</span
+                  >
+                  <div
+                    class="h-tooltip__arrow"
+                    data-popper-arrow=""
+                    style="
+                      position: absolute;
+                      left: 0px;
+                      transform: translate(96px, 0px);
+                    "
+                  ></div>
+                </div>
+              </div>
+              <p class="selected-price pp-upsell__text h-ml-8">
+                <strong>$0.00</strong>
+              </p>
+            </div>
+          </div> -->
+      </div>
+      <script src="./script.js"></script>
+</body>
+</html>

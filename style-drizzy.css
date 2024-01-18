@@ -125,3 +125,12 @@
   width: fit-content;
 }
 
+.whatsapp-contact  {
+  display: block;
+}
+
+@media screen and (max-width: 479px) {
+  .whatsapp-contact {
+    top: 85%;
+  }
+}
