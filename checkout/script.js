@@ -1,14 +1,3 @@
-// alert(window.location.search);
-
-// alert(document.getElementById("checkOutCard"))
-
-// document.getElementById("checkOutCard").innerHTML = checkOutTemplate;
-
-// let checkOutItem = window.location.search;
-
-// function init(cardObject) {
-//   alert(cardObject);
-// }
 let pageUrl = window.location.search;
 let checkOutCategory;
 let checkOutItem;
@@ -31,54 +20,16 @@ if (pageUrl.includes("=network&") == true) {
     .replace(/%20/g, " ");
 }
 
-console.log(checkOutCategory, checkOutItem);
-// let checkoutItem = window.location.search
-//   .replace("?params=", "")
-//   .replace(/%20/g, " ");
-//   console.log(typeof(checkoutItem))
-// console.log(checkOutCategory)
-// decodeURIComponent(checkoutItem.replace(/\+/g, "%20"));
-// alert(checkoutItem);
-
-// alert(window.location.search);
-// var str_name = 'This+is+a+message+with+spaces';
-// decodeURIComponent((str_name + '').replace(/\+/g, '%20'));d
-
+document.getElementById("goBack").href = `/${checkOutCategory}`
 function checkOutService(service) {
-  console.log(service);
   document.getElementById("service-title").innerHTML = service.title;
-  //   document.getElementById("titleMobile").innerHTML = service.title;
   document.getElementById("total").innerHTML =
     "Total: " + "£" + service.pricing.pricingWhole;
   paymentUrl = service.paymentUrl.toString();
-  //   document.getElementById("paymentLink").href = service.paymentUrl.toString()
-  // document.getElementById("proceedButton").addEventListener("onclick", console.log("hi"))
 }
-
-// function sendCheckoutConfirmation() {
-//     if (pickupMailSender.includes("@")) {
-//         fetch('http://localhost:3000/checkout', {
-//             method: "POST",
-//             body: JSON.stringify({
-//                 "email": `${pickupMailSender}`
-//             }),
-//             headers: { 'Content-Type': 'application/json' }
-//         })
-//             .then(
-//                 (res) => {
-//                     if (res.status == 200) {
-//                         console.log("done")
-//                     }
-//                 }
-//             )
-
-//     }
-
-//   }
 
 function proceedButton() {
   let fullName = document.getElementById("full-name").value;
-  // let lastName = document.getElementById("lastName").value;
   let emailAddress = document.getElementById("emailAddress").value;
   let mobileNumber = document.getElementById("mobileNumber").value;
   let region = document.getElementById("region").value;
@@ -115,7 +66,6 @@ function proceedButton() {
 }
 
 function paymentLink(paymentUrl) {
-  // location.replace(paymentUrl)
   var paymentUrl1 = paymentUrl;
   console.log(paymentUrl);
 }
@@ -127,14 +77,9 @@ fetch(myRequest)
   .then((response) => response.json())
   .then((data) => {
     console.log(data.result);
-    // console.log(data.servicesData);
     data.result.forEach((service) => {
-      // alert(service)
       if (service.title.toLowerCase() == checkOutItem) {
-        // alert(service.Title.toLowerCase())
-        // console.log(service.paymentUrl.toString())
         checkOutService(service);
-        // paymentLink(service.paymentUrl.toString())
       }
     });
   })
