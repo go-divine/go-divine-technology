@@ -31769,7 +31769,6 @@ __p+='`),
             (Y.dropdownToggle = Y.menu.find(".w-dropdown-toggle")),
             (Y.dropdownList = Y.menu.find(".w-dropdown-list")),
             (Y.button = te.find(".w-nav-button")),
-            (Y.button = te.find(".w-nav-button-home")),
             (Y.container = te.find(".w-container")),
             (Y.overlayContainerId = "w-nav-overlay-" + N),
             (Y.outside = O(Y));

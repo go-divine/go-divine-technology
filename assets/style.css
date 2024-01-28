@@ -1945,25 +1945,12 @@ html {
     display: none;
     position: relative;
   }
-
-  .w-nav-button-home  {
-    float: right;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 24px;
-    display: none;
-    position: relative;
-  }
   
-  .w-nav-button, .w-nav-button-home :focus {
+  .w-nav-button:focus {
     outline: 0;
   }
   
-  .w-nav-button, .w-nav-button-home .w--open {
+  .w-nav-button.w--open {
     color: #fff;
     background-color: #c8c8c8;
   }
@@ -1972,7 +1959,7 @@ html {
     display: none;
   }
   
-  .w-nav[data-collapse="all"] .w-nav-button, .w-nav-button-home , .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
+  .w-nav[data-collapse="all"] .w-nav-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
     display: block;
   }
   
@@ -1985,7 +1972,7 @@ html {
       display: none;
     }
   
-    .w-nav[data-collapse="medium"] .w-nav-button, .w-nav-button-home  {
+    .w-nav[data-collapse="medium"] .w-nav-button {
       display: block;
     }
   }
@@ -1995,7 +1982,7 @@ html {
       display: none;
     }
   
-    .w-nav[data-collapse="small"] .w-nav-button, .w-nav-button-home  {
+    .w-nav[data-collapse="small"] .w-nav-button {
       display: block;
     }
   
@@ -2009,7 +1996,7 @@ html {
       display: none;
     }
   
-    .w-nav[data-collapse="tiny"] .w-nav-button, .w-nav-button-home  {
+    .w-nav[data-collapse="tiny"] .w-nav-button {
       display: block;
     }
   }
@@ -4180,17 +4167,7 @@ html {
     align-self: center;
     display: flex;
   }
-  .sassy-two-nav-button-two-book-now {
-    background-color: #6f56ff;
-    border-radius: 10px;
-    padding: 12px 20px;
-    font-family: Averta Bold, sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.2em;
-    transition: box-shadow .2s;
-  }
-
+  
   .sassy-two-nav-button-two {
     background-color: #ff3f79;
     border-radius: 10px;
@@ -10948,20 +10925,13 @@ html {
       padding: 12px 20px;
       display: none;
     }
-
-    .sassy-service-menu-button-home {
-      color: #fff7f3;
-      margin-right: 20px;
-      background-color: #6f56ff;
-      border-radius: 5px;
-      padding: 5px;
-    }
   
     .sassy-service-menu-button {
       color: #fff7f3;
       background-color: #6f56ff;
       border-radius: 5px;
       padding: 12px;
+      margin-right: 5%;
     }
   
     .sassy-service-menu-button.w--open {
