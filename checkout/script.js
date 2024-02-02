@@ -40,7 +40,7 @@ function proceedButton() {
   let countryCode = document.getElementById("country")?.value;
   let countryList = document.getElementById("country")?.innerHTML;
   if (emailAddress.includes("@")) {
-    fetch("https://t46tdd-3000.csb.app/checkout", {
+    fetch("https://xmpq6r-3000.csb.app/checkout", {
       method: "POST",
       body: JSON.stringify({
         fullName: `${fullName}`,
